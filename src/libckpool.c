@@ -18,13 +18,14 @@
 #endif
 #include <sys/epoll.h>
 #include <sys/file.h>
-#include <sys/prctl.h>
+//#include <sys/prctl.h>
 #include <sys/stat.h>
 #include <netdb.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
+#include <pthread_np.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/time.h>
@@ -40,6 +41,15 @@
 #ifndef UNIX_PATH_MAX
 #define UNIX_PATH_MAX 108
 #endif
+
+#define strdupa(s)                                                           \
+    ({                                                                        \
+      const char *__old = (s);                                                \
+      size_t __len = strlen(__old) + 1;                                       \
+      char *__new = (char *) alloca(__len);                                   \
+      (char *) memcpy(__new, __old, __len);                                   \
+    })
+
 
 /* We use a weak function as a simple printf within the library that can be
  * overridden by however the outside executable wishes to do its logging. */
@@ -62,7 +72,7 @@ void rename_proc(const char *name)
 
 	snprintf(buf, 15, "ckp@%s", name);
 	buf[15] = '\0';
-	prctl(PR_SET_NAME, buf, 0, 0, 0);
+	pthread_set_name_np(pthread_self(), buf);
 }
 
 void create_pthread(pthread_t *thread, void *(*start_routine)(void *), void *arg)
@@ -477,7 +487,7 @@ bool extract_sockaddr(char *url, char **sockaddr_url, char **sockaddr_port)
 		url_len -= 2;
 		url_begin++;
 	}
-	
+
 	if (url_len < 1) {
 		LOGWARNING("Null length URL passed to extract_sockaddr");
 		return false;
@@ -633,10 +643,10 @@ void keep_sockalive(int fd)
 	const int tcp_keepintvl = 30;
 
 	setsockopt(fd, SOL_SOCKET, SO_KEEPALIVE, (const void *)&tcp_one, sizeof(tcp_one));
-	setsockopt(fd, SOL_TCP, TCP_NODELAY, (const void *)&tcp_one, sizeof(tcp_one));
-	setsockopt(fd, SOL_TCP, TCP_KEEPCNT, &tcp_one, sizeof(tcp_one));
-	setsockopt(fd, SOL_TCP, TCP_KEEPIDLE, &tcp_keepidle, sizeof(tcp_keepidle));
-	setsockopt(fd, SOL_TCP, TCP_KEEPINTVL, &tcp_keepintvl, sizeof(tcp_keepintvl));
+	setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, (const void *)&tcp_one, sizeof(tcp_one));
+	setsockopt(fd, IPPROTO_TCP, TCP_KEEPCNT, &tcp_one, sizeof(tcp_one));
+	setsockopt(fd, IPPROTO_TCP, TCP_KEEPIDLE, &tcp_keepidle, sizeof(tcp_keepidle));
+	setsockopt(fd, IPPROTO_TCP, TCP_KEEPINTVL, &tcp_keepintvl, sizeof(tcp_keepintvl));
 }
 
 void nolinger_socket(int fd)
@@ -660,7 +670,7 @@ void block_socket(int fd)
 	fcntl(fd, F_SETFL, flags & ~O_NONBLOCK);
 }
 
-void _close(int *fd, const char *file, const char *func, const int line)
+void ckp_close(int *fd, const char *file, const char *func, const int line)
 {
 	int sockd;
 
@@ -1328,7 +1338,7 @@ char *json_array_string(json_t *val, unsigned int entry)
 	const char *buf = __json_array_string(val, entry);
 
 	if (buf)
-		return strdup(buf);
+		return strdupa(buf);
 	return NULL;
 }
 
@@ -1409,11 +1419,14 @@ void realloc_strcat(char **ptr, const char *s)
 		LOGWARNING("Passed empty string to realloc_strcat");
 		return;
 	}
-	if (!*ptr)
+	if (!*ptr) {
 		old = 0;
-	else
+        len = new + 1;
+    }
+	else {
 		old = strlen(*ptr);
-	len = old + new + 1;
+	    len = old + new + 1;
+    }
 	len = round_up_page(len);
 	while (42) {
 		new_ptr = realloc(*ptr, len);
@@ -1426,16 +1439,19 @@ void realloc_strcat(char **ptr, const char *s)
 	}
 	*ptr = new_ptr;
 	ofs = *ptr + old;
-	sprintf(ofs, "%s", s);
+	strcpy(ofs, s);
 }
 
 void trail_slash(char **buf)
 {
-	int ofs;
+    size_t ofs;
 
-	ofs = strlen(*buf) - 1;
-	if (memcmp(*buf + ofs, "/", 1))
-		realloc_strcat(buf, "/");
+    if (!*buf)
+        return;
+
+    ofs = strlen(*buf);
+    if (ofs && (*buf)[ofs - 1] != '/')
+        realloc_strcat(buf, "/");
 }
 
 void *_ckalloc(size_t len, const char *file, const char *func, const int line)

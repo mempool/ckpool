@@ -3127,7 +3127,7 @@ static void send_subproxystats(gdata_t *gdata, const int sockd)
 
 static void parse_globaluser(ckpool_t *ckp, gdata_t *gdata, const char *buf)
 {
-	char *url, *username, *pass = strdupa(buf);
+	char *url, *username, *pass = strdup(buf);
 	int userid = -1, proxyid = -1;
 	proxy_instance_t *proxy, *tmp;
 	int64_t clientid = -1;

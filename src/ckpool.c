@@ -10,7 +10,6 @@
 #include "config.h"
 
 #include <sys/ioctl.h>
-#include <sys/prctl.h>
 #include <sys/socket.h>
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -20,6 +19,7 @@
 #include <getopt.h>
 #include <grp.h>
 #include <jansson.h>
+#include <libgen.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,6 +31,8 @@
 #include "generator.h"
 #include "stratifier.h"
 #include "connector.h"
+
+#define INET6_ADDRSTRLEN 46
 
 ckpool_t *global_ckp;
 
@@ -495,7 +497,7 @@ int set_sendbufsize(ckpool_t *ckp, const int fd, const int len)
 			 len, opt);
 		optlen = sizeof(opt);
 		opt = len * 4 / 3;
-		setsockopt(fd, SOL_SOCKET, SO_SNDBUFFORCE, &opt, optlen);
+		setsockopt(fd, SOL_SOCKET, SO_SNDBUF, &opt, optlen);
 		getsockopt(fd, SOL_SOCKET, SO_SNDBUF, &opt, &optlen);
 		opt /= 2;
 	}
@@ -523,7 +525,7 @@ int set_recvbufsize(ckpool_t *ckp, const int fd, const int len)
 			 len, opt);
 		optlen = sizeof(opt);
 		opt = len * 4 / 3;
-		setsockopt(fd, SOL_SOCKET, SO_RCVBUFFORCE, &opt, optlen);
+		setsockopt(fd, SOL_SOCKET, SO_RCVBUF, &opt, optlen);
 		getsockopt(fd, SOL_SOCKET, SO_RCVBUF, &opt, &optlen);
 		opt /= 2;
 	}
@@ -1593,7 +1595,7 @@ int main(int argc, char **argv)
 	ckp.initial_args[ckp.args] = NULL;
 
 	appname = basename(argv[0]);
-	if (!strcmp(appname, "ckproxy"))
+	if(!strcmp(appname, "ckproxy"))
 		ckp.proxy = true;
 
 	while ((c = getopt_long(argc, argv, "Bc:Dd:g:HhkLl:Nn:PpqRS:s:tu", long_options, &i)) != -1) {
@@ -1701,7 +1703,6 @@ int main(int argc, char **argv)
 			ckp.name = "ckpool";
 	}
 	snprintf(buf, 15, "%s", ckp.name);
-	prctl(PR_SET_NAME, buf, 0, 0, 0);
 	memset(buf, 0, 15);
 
 	if (ckp.grpnam) {
@@ -1714,8 +1715,8 @@ int main(int argc, char **argv)
 		ckp.gr_gid = getegid();
 
 	if (!ckp.config) {
-		ckp.config = strdup(ckp.name);
-		realloc_strcat(&ckp.config, ".conf");
+        ckp.config = strdup(ckp.name);
+        realloc_strcat(&ckp.config, ".conf");
 	}
 	if (!ckp.socket_dir) {
 		ckp.socket_dir = strdup("/tmp/");
@@ -1745,7 +1746,8 @@ int main(int argc, char **argv)
 		if (!ckp.btcdauth[i])
 			ckp.btcdauth[i] = strdup("user");
 		if (!ckp.btcdpass[i])
-			ckp.btcdpass[i] = strdup("pass");
+			ckp.btcdpass[i] = strdup
+                ("pass");
 	}
 
 	ckp.donaddress = "bc1q28kkr5hk4gnqe3evma6runjrd2pvqyp8fpwfzu";
@@ -1777,8 +1779,12 @@ int main(int argc, char **argv)
 		ckp.startdiff = 42;
 	if (!ckp.highdiff)
 		ckp.highdiff = 1000000;
-	if (!ckp.logdir)
+    if (ckp.logdir) {
+        char *t = strdup(ckp.logdir);
+        ckp.logdir = t;
+    } else {
 		ckp.logdir = strdup("logs");
+    }
 	if (!ckp.serverurls)
 		ckp.serverurl = ckzalloc(sizeof(char *));
 	if (ckp.proxy && !ckp.proxies)

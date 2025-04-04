@@ -19,6 +19,7 @@
 #include <math.h>
 #include <string.h>
 #include <unistd.h>
+#include <libgen.h>
 
 #ifdef HAVE_ZMQ_H
 #include <zmq.h>
@@ -39,6 +40,15 @@ static const char *workpadding = "0000008000000000000000000000000000000000000000
 static const char *scriptsig_header = "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff";
 static uchar scriptsig_header_bin[41];
 static const double nonces = 4294967296;
+
+# define strdupa(s)                                                           \
+    ({                                                                        \
+      const char *__old = (s);                                                \
+      size_t __len = strlen(__old) + 1;                                       \
+      char *__new = (char *) alloca(__len);                                   \
+      (char *) memcpy(__new, __old, __len);                                   \
+    })
+
 
 /* Add unaccounted shares when they arrive, remove them with each update of
  * rolling stats. */
@@ -4941,7 +4951,7 @@ static json_t *parse_subscribe(stratum_instance_t *client, const int64_t client_
 
 		buf = json_string_value(json_array_get(params_val, 0));
 		if (buf && strlen(buf))
-			client->useragent = strdup(buf);
+			client->useragent = strdupa(buf);
 		else
 			client->useragent = ckzalloc(1); // Set to ""
 		if (arr_size > 1) {
@@ -5150,7 +5160,7 @@ static void read_userstats(ckpool_t *ckp, sdata_t *sdata, int tvsec_diff)
 		int lastshare;
 		size_t index;
 
-		username = basename(dir->d_name);
+        username = basename(dir->d_name);
 		if (!strcmp(username, "/") || !strcmp(username, ".") || !strcmp(username, ".."))
 			continue;
 
@@ -5299,7 +5309,7 @@ static worker_instance_t *__create_worker(user_instance_t *user, const char *wor
 {
 	worker_instance_t *worker = ckzalloc(sizeof(worker_instance_t));
 
-	worker->workername = strdup(workername);
+	worker->workername = strdupa(workername);
 	worker->user_instance = user;
 	DL_APPEND(user->worker_instances, worker);
 	worker->start_time = time(NULL);

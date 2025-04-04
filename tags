@@ -1,0 +1,1282 @@
+ASPRINTF	./src/libckpool.h	/^#define ASPRINTF(strp, fmt, ...) do { \\$/
+CDL_COUNT	./src/utlist.h	/^#define CDL_COUNT(head,el,counter)                /
+CDL_COUNT2	./src/utlist.h	/^#define CDL_COUNT2(head, el, counter,next)        /
+CDL_DELETE	./src/utlist.h	/^#define CDL_DELETE(head,del)                      /
+CDL_DELETE2	./src/utlist.h	/^#define CDL_DELETE2(head,del,prev,next)           /
+CDL_FOREACH	./src/utlist.h	/^#define CDL_FOREACH(head,el)                      /
+CDL_FOREACH2	./src/utlist.h	/^#define CDL_FOREACH2(head,el,next)                /
+CDL_FOREACH_SAFE	./src/utlist.h	/^#define CDL_FOREACH_SAFE(head,el,tmp1,tmp2)       /
+CDL_FOREACH_SAFE2	./src/utlist.h	/^#define CDL_FOREACH_SAFE2(head,el,tmp1,tmp2,prev,n/
+CDL_PREPEND	./src/utlist.h	/^#define CDL_PREPEND(head,add)                     /
+CDL_PREPEND2	./src/utlist.h	/^#define CDL_PREPEND2(head,add,prev,next)          /
+CDL_PREPEND_ELEM	./src/utlist.h	/^#define CDL_PREPEND_ELEM(head, el, add)           /
+CDL_REPLACE_ELEM	./src/utlist.h	/^#define CDL_REPLACE_ELEM(head, el, add)           /
+CDL_SEARCH	./src/utlist.h	/^#define CDL_SEARCH(head,out,elt,cmp)              /
+CDL_SEARCH2	./src/utlist.h	/^#define CDL_SEARCH2(head,out,elt,cmp,next)        /
+CDL_SEARCH_SCALAR	./src/utlist.h	/^#define CDL_SEARCH_SCALAR(head,out,field,val)     /
+CDL_SEARCH_SCALAR2	./src/utlist.h	/^#define CDL_SEARCH_SCALAR2(head,out,field,val,next/
+CDL_SORT	./src/utlist.h	/^#define CDL_SORT(list, cmp)                       /
+CDL_SORT2	./src/utlist.h	/^#define CDL_SORT2(list, cmp, prev, next)          /
+CH	./src/sha2.h	/^#define CH(x, y, z)  ((x & y) ^ (~x & z))$/
+Close	./src/libckpool.h	/^#define Close(FD) ckp_close(&FD, __FILE__, __func_/
+DECLTYPE	./src/uthash.h	/^#define DECLTYPE(x) (decltype(x))$/
+DECLTYPE_ASSIGN	./src/uthash.h	/^#define DECLTYPE_ASSIGN(dst,src)                  /
+DL_APPEND	./src/utlist.h	/^#define DL_APPEND(head,add)                       /
+DL_APPEND2	./src/utlist.h	/^#define DL_APPEND2(head,add,prev,next)            /
+DL_CONCAT	./src/utlist.h	/^#define DL_CONCAT(head1,head2)                    /
+DL_CONCAT2	./src/utlist.h	/^#define DL_CONCAT2(head1,head2,prev,next)         /
+DL_COUNT	./src/utlist.h	/^#define DL_COUNT(head,el,counter)                 /
+DL_COUNT2	./src/utlist.h	/^#define DL_COUNT2(head,el,counter,next)           /
+DL_DELETE	./src/utlist.h	/^#define DL_DELETE(head,del)                       /
+DL_DELETE2	./src/utlist.h	/^#define DL_DELETE2(head,del,prev,next)            /
+DL_FOREACH	./src/utlist.h	/^#define DL_FOREACH(head,el)                       /
+DL_FOREACH2	./src/utlist.h	/^#define DL_FOREACH2(head,el,next)                 /
+DL_FOREACH_SAFE	./src/utlist.h	/^#define DL_FOREACH_SAFE(head,el,tmp)              /
+DL_FOREACH_SAFE2	./src/utlist.h	/^#define DL_FOREACH_SAFE2(head,el,tmp,next)        /
+DL_PREPEND	./src/utlist.h	/^#define DL_PREPEND(head,add)                      /
+DL_PREPEND2	./src/utlist.h	/^#define DL_PREPEND2(head,add,prev,next)           /
+DL_PREPEND_ELEM	./src/utlist.h	/^#define DL_PREPEND_ELEM(head, el, add)            /
+DL_REPLACE_ELEM	./src/utlist.h	/^#define DL_REPLACE_ELEM(head, el, add)            /
+DL_SORT	./src/utlist.h	/^#define DL_SORT(list, cmp)                        /
+DL_SORT2	./src/utlist.h	/^#define DL_SORT2(list, cmp, prev, next)           /
+ELMT_FROM_HH	./src/uthash.h	/^#define ELMT_FROM_HH(tbl,hhp) ((void*)(((char*)(hh/
+FLAGS_TO_INDENT	./src/jansson-2.14/src/dump.c	/^#define FLAGS_TO_INDENT(f)    ((f)&0x1F)$/
+FLAGS_TO_PRECISION	./src/jansson-2.14/src/dump.c	/^#define FLAGS_TO_PRECISION(f) (((f) >> 11) & 0x1F)/
+HASH_ADD	./src/uthash.h	/^#define HASH_ADD(hh,head,fieldname,keylen_in,add) /
+HASH_ADD_BYHASHVALUE	./src/uthash.h	/^#define HASH_ADD_BYHASHVALUE(hh,head,fieldname,key/
+HASH_ADD_BYHASHVALUE_INORDER	./src/uthash.h	/^#define HASH_ADD_BYHASHVALUE_INORDER(hh,head,field/
+HASH_ADD_I64	./src/uthash.h	/^#define HASH_ADD_I64(head,intfield,add)           /
+HASH_ADD_INORDER	./src/uthash.h	/^#define HASH_ADD_INORDER(hh,head,fieldname,keylen_/
+HASH_ADD_INT	./src/uthash.h	/^#define HASH_ADD_INT(head,intfield,add)           /
+HASH_ADD_KEYPTR	./src/uthash.h	/^#define HASH_ADD_KEYPTR(hh,head,keyptr,keylen_in,a/
+HASH_ADD_KEYPTR_BYHASHVALUE	./src/uthash.h	/^#define HASH_ADD_KEYPTR_BYHASHVALUE(hh,head,keyptr/
+HASH_ADD_KEYPTR_BYHASHVALUE_INORDER	./src/uthash.h	/^#define HASH_ADD_KEYPTR_BYHASHVALUE_INORDER(hh,hea/
+HASH_ADD_KEYPTR_INORDER	./src/uthash.h	/^#define HASH_ADD_KEYPTR_INORDER(hh,head,keyptr,key/
+HASH_ADD_PTR	./src/uthash.h	/^#define HASH_ADD_PTR(head,ptrfield,add)           /
+HASH_ADD_STR	./src/uthash.h	/^#define HASH_ADD_STR(head,strfield,add)           /
+HASH_ADD_TO_BKT	./src/uthash.h	/^#define HASH_ADD_TO_BKT(head,hh,addhh,oomed)      /
+HASH_ADD_TO_TABLE	./src/uthash.h	/^#define HASH_ADD_TO_TABLE(hh,head,keyptr,keylen_in/
+HASH_AKBI_INNER_LOOP	./src/uthash.h	/^#define HASH_AKBI_INNER_LOOP(hh,head,add,cmpfcn)  /
+HASH_APPEND_LIST	./src/uthash.h	/^#define HASH_APPEND_LIST(hh, head, add)           /
+HASH_BER	./src/uthash.h	/^#define HASH_BER(key,keylen,hashv)                /
+HASH_BLOOM_ADD	./src/uthash.h	/^#define HASH_BLOOM_ADD(tbl,hashv)                 /
+HASH_BLOOM_BITSET	./src/uthash.h	/^#define HASH_BLOOM_BITSET(bv,idx) (bv[(idx)\/8U] |/
+HASH_BLOOM_BITTEST	./src/uthash.h	/^#define HASH_BLOOM_BITTEST(bv,idx) (bv[(idx)\/8U] /
+HASH_BLOOM_FREE	./src/uthash.h	/^#define HASH_BLOOM_FREE(tbl)                      /
+HASH_BLOOM_MAKE	./src/uthash.h	/^#define HASH_BLOOM_MAKE(tbl,oomed)                /
+HASH_BLOOM_TEST	./src/uthash.h	/^#define HASH_BLOOM_TEST(tbl,hashv)                /
+HASH_CLEAR	./src/uthash.h	/^#define HASH_CLEAR(hh,head)                       /
+HASH_CNT	./src/uthash.h	/^#define HASH_CNT(hh,head) ((head != NULL)?((head)-/
+HASH_COUNT	./src/uthash.h	/^#define HASH_COUNT(head) HASH_CNT(hh,head)$/
+HASH_DEL	./src/uthash.h	/^#define HASH_DEL(head,delptr)                     /
+HASH_DELETE	./src/uthash.h	/^#define HASH_DELETE(hh,head,delptr)               /
+HASH_DELETE_HH	./src/uthash.h	/^#define HASH_DELETE_HH(hh,head,delptrhh)          /
+HASH_DEL_IN_BKT	./src/uthash.h	/^#define HASH_DEL_IN_BKT(head,delhh)               /
+HASH_EMIT_KEY	./src/uthash.h	/^#define HASH_EMIT_KEY(hh,head,keyptr,fieldlen)    /
+HASH_EXPAND_BUCKETS	./src/uthash.h	/^#define HASH_EXPAND_BUCKETS(hh,tbl,oomed)         /
+HASH_FIND	./src/uthash.h	/^#define HASH_FIND(hh,head,keyptr,keylen,out)      /
+HASH_FIND_BYHASHVALUE	./src/uthash.h	/^#define HASH_FIND_BYHASHVALUE(hh,head,keyptr,keyle/
+HASH_FIND_I64	./src/uthash.h	/^#define HASH_FIND_I64(head,findint,out)           /
+HASH_FIND_INT	./src/uthash.h	/^#define HASH_FIND_INT(head,findint,out)           /
+HASH_FIND_IN_BKT	./src/uthash.h	/^#define HASH_FIND_IN_BKT(tbl,hh,head,keyptr,keylen/
+HASH_FIND_PTR	./src/uthash.h	/^#define HASH_FIND_PTR(head,findptr,out)           /
+HASH_FIND_STR	./src/uthash.h	/^#define HASH_FIND_STR(head,findstr,out)           /
+HASH_FNV	./src/uthash.h	/^#define HASH_FNV(key,keylen,hashv)                /
+HASH_FSCK	./src/uthash.h	/^#define HASH_FSCK(hh,head,where)                  /
+HASH_FUNCTION	./src/uthash.h	/^#define HASH_FUNCTION(keyptr,keylen,hashv) HASH_JE/
+HASH_ITER	./src/uthash.h	/^#define HASH_ITER(hh,head,el,tmp)                 /
+HASH_JEN	./src/uthash.h	/^#define HASH_JEN(key,keylen,hashv)                /
+HASH_JEN_MIX	./src/uthash.h	/^#define HASH_JEN_MIX(a,b,c)                       /
+HASH_KEYCMP	./src/uthash.h	/^#define HASH_KEYCMP(a,b,n) memcmp(a,b,n)$/
+HASH_MAKE_TABLE	./src/uthash.h	/^#define HASH_MAKE_TABLE(hh,head,oomed)            /
+HASH_OAT	./src/uthash.h	/^#define HASH_OAT(key,keylen,hashv)                /
+HASH_OOPS	./src/uthash.h	/^#define HASH_OOPS(...) do { fprintf(stderr, __VA_A/
+HASH_OVERHEAD	./src/uthash.h	/^#define HASH_OVERHEAD(hh,head)                    /
+HASH_RECORD_OOM	./src/uthash.h	/^#define HASH_RECORD_OOM(oomed) do { (oomed) = 1; }/
+HASH_REPLACE	./src/uthash.h	/^#define HASH_REPLACE(hh,head,fieldname,keylen_in,a/
+HASH_REPLACE_BYHASHVALUE	./src/uthash.h	/^#define HASH_REPLACE_BYHASHVALUE(hh,head,fieldname/
+HASH_REPLACE_BYHASHVALUE_INORDER	./src/uthash.h	/^#define HASH_REPLACE_BYHASHVALUE_INORDER(hh,head,f/
+HASH_REPLACE_INORDER	./src/uthash.h	/^#define HASH_REPLACE_INORDER(hh,head,fieldname,key/
+HASH_REPLACE_INT	./src/uthash.h	/^#define HASH_REPLACE_INT(head,intfield,add,replace/
+HASH_REPLACE_PTR	./src/uthash.h	/^#define HASH_REPLACE_PTR(head,ptrfield,add,replace/
+HASH_REPLACE_STR	./src/uthash.h	/^#define HASH_REPLACE_STR(head,strfield,add,replace/
+HASH_ROLLBACK_BKT	./src/uthash.h	/^#define HASH_ROLLBACK_BKT(hh, head, itemptrhh)    /
+HASH_SAX	./src/uthash.h	/^#define HASH_SAX(key,keylen,hashv)                /
+HASH_SELECT	./src/uthash.h	/^#define HASH_SELECT(hh_dst, dst, hh_src, src, cond/
+HASH_SFH	./src/uthash.h	/^#define HASH_SFH(key,keylen,hashv)                /
+HASH_SORT	./src/uthash.h	/^#define HASH_SORT(head,cmpfcn) HASH_SRT(hh,head,cm/
+HASH_SRT	./src/uthash.h	/^#define HASH_SRT(hh,head,cmpfcn)                  /
+HASH_TO_BKT	./src/uthash.h	/^#define HASH_TO_BKT(hashv,num_bkts,bkt)           /
+HASH_VALUE	./src/uthash.h	/^#define HASH_VALUE(keyptr,keylen,hashv)           /
+HH_FROM_ELMT	./src/uthash.h	/^#define HH_FROM_ELMT(tbl,elp) ((UT_hash_handle*)(v/
+IF_HASH_NONFATAL_OOM	./src/uthash.h	/^#define IF_HASH_NONFATAL_OOM(x) x$/
+JANSSON_ATTRS	./src/jansson-2.14/src/jansson.h	/^#define JANSSON_ATTRS(x) __attribute__(x)$/
+JSON_CPACK	./src/libckpool.h	/^#define JSON_CPACK(VAL, ...) do { \\$/
+JSON_ERR	./src/stratifier.c	/^#define JSON_ERR(err) json_string(SHARE_ERR(err))$/
+JSON_INDENT	./src/jansson-2.14/src/jansson.h	/^#define JSON_INDENT(n)         ((n)&JSON_MAX_INDEN/
+JSON_INTERNAL_DECREF	./src/jansson-2.14/src/jansson.h	/^#define JSON_INTERNAL_DECREF(json)                /
+JSON_INTERNAL_INCREF	./src/jansson-2.14/src/jansson.h	/^#define JSON_INTERNAL_INCREF(json)                /
+JSON_REAL_PRECISION	./src/jansson-2.14/src/jansson.h	/^#define JSON_REAL_PRECISION(n) (((n)&0x1F) << 11)$/
+LDECLTYPE	./src/utlist.h	/^#define LDECLTYPE(x) decltype(x)$/
+LL_APPEND	./src/utlist.h	/^#define LL_APPEND(head,add)                       /
+LL_APPEND2	./src/utlist.h	/^#define LL_APPEND2(head,add,next)                 /
+LL_APPEND2_VS2008	./src/utlist.h	/^#define LL_APPEND2_VS2008(head,add,next)          /
+LL_APPEND_VS2008	./src/utlist.h	/^#define LL_APPEND_VS2008(head,add)                /
+LL_CONCAT	./src/utlist.h	/^#define LL_CONCAT(head1,head2)                    /
+LL_CONCAT2	./src/utlist.h	/^#define LL_CONCAT2(head1,head2,next)              /
+LL_COUNT	./src/utlist.h	/^#define LL_COUNT(head,el,counter)                 /
+LL_COUNT2	./src/utlist.h	/^#define LL_COUNT2(head,el,counter,next)           /
+LL_DELETE	./src/utlist.h	/^#define LL_DELETE(head,del)                       /
+LL_DELETE2	./src/utlist.h	/^#define LL_DELETE2(head,del,next)                 /
+LL_DELETE2_VS2008	./src/utlist.h	/^#define LL_DELETE2_VS2008(head,del,next)          /
+LL_DELETE_VS2008	./src/utlist.h	/^#define LL_DELETE_VS2008(head,del)                /
+LL_FOREACH	./src/utlist.h	/^#define LL_FOREACH(head,el)                       /
+LL_FOREACH2	./src/utlist.h	/^#define LL_FOREACH2(head,el,next)                 /
+LL_FOREACH_SAFE	./src/utlist.h	/^#define LL_FOREACH_SAFE(head,el,tmp)              /
+LL_FOREACH_SAFE2	./src/utlist.h	/^#define LL_FOREACH_SAFE2(head,el,tmp,next)        /
+LL_PREPEND	./src/utlist.h	/^#define LL_PREPEND(head,add)                      /
+LL_PREPEND2	./src/utlist.h	/^#define LL_PREPEND2(head,add,next)                /
+LL_PREPEND_ELEM	./src/utlist.h	/^#define LL_PREPEND_ELEM(head, el, add)            /
+LL_REPLACE_ELEM	./src/utlist.h	/^#define LL_REPLACE_ELEM(head, el, add)            /
+LL_SEARCH	./src/utlist.h	/^#define LL_SEARCH(head,out,elt,cmp)               /
+LL_SEARCH2	./src/utlist.h	/^#define LL_SEARCH2(head,out,elt,cmp,next)         /
+LL_SEARCH_SCALAR	./src/utlist.h	/^#define LL_SEARCH_SCALAR(head,out,field,val)      /
+LL_SEARCH_SCALAR2	./src/utlist.h	/^#define LL_SEARCH_SCALAR2(head,out,field,val,next)/
+LL_SORT	./src/utlist.h	/^#define LL_SORT(list, cmp)                        /
+LL_SORT2	./src/utlist.h	/^#define LL_SORT2(list, cmp, next)                 /
+LOGALERT	./src/libckpool.h	/^#define LOGALERT(fmt, ...) LOGMSG(LOG_ALERT, fmt, /
+LOGCRIT	./src/libckpool.h	/^#define LOGCRIT(fmt, ...) LOGMSG(LOG_CRIT, fmt, ##/
+LOGDEBUG	./src/libckpool.h	/^#define LOGDEBUG(fmt, ...) LOGMSG(LOG_DEBUG, fmt, /
+LOGEMERG	./src/libckpool.h	/^#define LOGEMERG(fmt, ...) LOGMSG(LOG_EMERG, fmt, /
+LOGERR	./src/libckpool.h	/^#define LOGERR(fmt, ...) LOGMSG(LOG_ERR, fmt, ##__/
+LOGINFO	./src/libckpool.h	/^#define LOGINFO(fmt, ...) LOGMSG(LOG_INFO, fmt, ##/
+LOGMSG	./src/libckpool.h	/^#define LOGMSG(_lvl, _fmt, ...) \\$/
+LOGMSGSIZ	./src/libckpool.h	/^#define LOGMSGSIZ(__siz, __lvl, __fmt, ...) do { /
+LOGNOTICE	./src/libckpool.h	/^#define LOGNOTICE(fmt, ...) LOGMSG(LOG_NOTICE, fmt/
+LOGWARNING	./src/libckpool.h	/^#define LOGWARNING(fmt, ...) LOGMSG(LOG_WARNING, f/
+MAJ	./src/sha2.h	/^#define MAJ(x, y, z) ((x & y) ^ (x & z) ^ (y & z))/
+MAX	./src/libckpool.h	/^#define MAX(a,b) \\$/
+MIN	./src/libckpool.h	/^#define MIN(a,b) \\$/
+Mckpmsg	./src/ckpmsg.c	/^int main(int argc, char **argv)$/
+Mckpool	./src/ckpool.c	/^int main(int argc, char **argv)$/
+Mgithub_commits	./src/jansson-2.14/doc/github_commits.c	/^int main(int argc, char *argv[]) {$/
+Mnotifier	./src/notifier.c	/^int main(int argc, char **argv)$/
+Msimple_parse	./src/jansson-2.14/examples/simple_parse.c	/^int main(int argc, char *argv[]) {$/
+PACK32	./src/sha2.c	/^#define PACK32(str, x)                        \\$/
+ROTR	./src/sha2.h	/^#define ROTR(x, n)   ((x >> n) | (x << ((sizeof(x)/
+SAFE_HASH_OVERHEAD	./src/ckpool.h	/^#define SAFE_HASH_OVERHEAD(HASHLIST) (HASHLIST ? H/
+SHA256_F1	./src/sha2.h	/^#define SHA256_F1(x) (ROTR(x,  2) ^ ROTR(x, 13) ^ /
+SHA256_F2	./src/sha2.h	/^#define SHA256_F2(x) (ROTR(x,  6) ^ ROTR(x, 11) ^ /
+SHA256_F3	./src/sha2.h	/^#define SHA256_F3(x) (ROTR(x,  7) ^ ROTR(x, 18) ^ /
+SHA256_F4	./src/sha2.h	/^#define SHA256_F4(x) (ROTR(x, 17) ^ ROTR(x, 19) ^ /
+SHA256_SCR	./src/sha2.c	/^#define SHA256_SCR(i)                         \\$/
+SHARE_ERR	./src/libckpool.h	/^#define SHARE_ERR(x) share_errs[((x) + 9)]$/
+SHFR	./src/sha2.h	/^#define SHFR(x, n)    (x >> n)$/
+UNPACK32	./src/sha2.c	/^#define UNPACK32(x, str)                      \\$/
+UT_hash_bucket	./src/uthash.h	/^} UT_hash_bucket;$/
+UT_hash_handle	./src/uthash.h	/^} UT_hash_handle;$/
+UT_hash_table	./src/uthash.h	/^} UT_hash_table;$/
+VASPRINTF	./src/libckpool.h	/^#define VASPRINTF(strp, fmt, ...) do { \\$/
+_CASTASGN	./src/utlist.h	/^#define _CASTASGN(a,b) { char **_alias = (char**)&/
+_Close	./src/libckpool.h	/^#define _Close(FD) ckp_close(FD, __FILE__, __func_/
+_NEXT	./src/utlist.h	/^#define _NEXT(elt,list,next) ((char*)((list)->next/
+_NEXTASGN	./src/utlist.h	/^#define _NEXTASGN(elt,list,to,next) { char **_alia/
+_PREVASGN	./src/utlist.h	/^#define _PREVASGN(elt,list,to,prev) { char **_alia/
+_RS	./src/utlist.h	/^#define _RS(list) { char **_alias = (char**)&(list/
+_SV	./src/utlist.h	/^#define _SV(elt,list) _tmp = (char*)(list); {char /
+__add_proxy	./src/generator.c	/^static proxy_instance_t *__add_proxy(ckpool_t *ckp/
+__add_to_remote_workbases	./src/stratifier.c	/^static void __add_to_remote_workbases(sdata_t *sda/
+__add_userproxy	./src/generator.c	/^static proxy_instance_t *__add_userproxy(ckpool_t /
+__attribute__	./src/libckpool.c	/^void __attribute__((weak)) logmsg(int __maybe_unus/
+__best_subproxy	./src/stratifier.c	/^static proxy_t *__best_subproxy(proxy_t *proxy)$/
+__bin2hex	./src/libckpool.c	/^void __bin2hex(void *vs, const void *vp, size_t le/
+__create_user	./src/stratifier.c	/^static user_instance_t *__create_user(sdata_t *sda/
+__create_worker	./src/stratifier.c	/^static worker_instance_t *__create_worker(user_ins/
+__dec_instance_ref	./src/stratifier.c	/^static int __dec_instance_ref(stratum_instance_t */
+__dec_worker	./src/stratifier.c	/^static void __dec_worker(sdata_t *sdata, user_inst/
+__decay_proxy	./src/generator.c	/^static void __decay_proxy(proxy_instance_t *proxy,/
+__del_client	./src/stratifier.c	/^static void __del_client(sdata_t *sdata, stratum_i/
+__disconnect_session	./src/stratifier.c	/^static void __disconnect_session(sdata_t *sdata, c/
+__drop_client	./src/stratifier.c	/^static void __drop_client(sdata_t *sdata, stratum_/
+__existing_proxy	./src/stratifier.c	/^static proxy_t *__existing_proxy(const sdata_t *sd/
+__existing_subproxy	./src/stratifier.c	/^static proxy_t *__existing_subproxy(proxy_t *proxy/
+__fill_enonce1data	./src/stratifier.c	/^static void __fill_enonce1data(const workbase_t *w/
+__find_remote_workbase	./src/stratifier.c	/^static workbase_t *__find_remote_workbase(sdata_t /
+__generate_proxy	./src/stratifier.c	/^static proxy_t *__generate_proxy(sdata_t *sdata, c/
+__generate_subproxy	./src/stratifier.c	/^static proxy_t *__generate_subproxy(sdata_t *sdata/
+__generate_userwb	./src/stratifier.c	/^static void __generate_userwb(sdata_t *sdata, work/
+__get_worker	./src/stratifier.c	/^static worker_instance_t *__get_worker(user_instan/
+__inc_instance_ref	./src/stratifier.c	/^static void __inc_instance_ref(stratum_instance_t /
+__inc_worker	./src/stratifier.c	/^static void __inc_worker(sdata_t *sdata, user_inst/
+__instance_by_id	./src/stratifier.c	/^static stratum_instance_t *__instance_by_id(sdata_/
+__json_array_string	./src/libckpool.c	/^const char *__json_array_string(json_t *val, unsig/
+__kill_instance	./src/stratifier.c	/^static void __kill_instance(sdata_t *sdata, stratu/
+__proxy_by_id	./src/stratifier.c	/^static proxy_t *__proxy_by_id(sdata_t *sdata, cons/
+__proxystats	./src/generator.c	/^static json_t *__proxystats(proxy_instance_t *prox/
+__recruit_stratum_instance	./src/stratifier.c	/^static stratum_instance_t *__recruit_stratum_insta/
+__recycle_client	./src/connector.c	/^static void __recycle_client(cdata_t *cdata, clien/
+__set_proxy_prio	./src/stratifier.c	/^static void __set_proxy_prio(sdata_t *sdata, proxy/
+__stratum_add_instance	./src/stratifier.c	/^static stratum_instance_t *__stratum_add_instance(/
+__stratum_notify	./src/stratifier.c	/^static json_t *__stratum_notify(const workbase_t */
+__subproxies_alive	./src/stratifier.c	/^static bool __subproxies_alive(proxy_t *proxy)$/
+__subproxy_by_id	./src/generator.c	/^static proxy_instance_t *__subproxy_by_id(proxy_in/
+__user_coinb2	./src/stratifier.c	/^static inline uchar *__user_coinb2(const stratum_i/
+__user_notify	./src/stratifier.c	/^static json_t *__user_notify(const workbase_t *wb,/
+_ck_dwilock	./src/libckpool.c	/^void _ck_dwilock(cklock_t *lock, const char *file,/
+_ck_dwlock	./src/libckpool.c	/^void _ck_dwlock(cklock_t *lock, const char *file, /
+_ck_rlock	./src/libckpool.c	/^void _ck_rlock(cklock_t *lock, const char *file, c/
+_ck_runlock	./src/libckpool.c	/^void _ck_runlock(cklock_t *lock, const char *file,/
+_ck_wlock	./src/libckpool.c	/^void _ck_wlock(cklock_t *lock, const char *file, c/
+_ck_wunlock	./src/libckpool.c	/^void _ck_wunlock(cklock_t *lock, const char *file,/
+_ckalloc	./src/libckpool.c	/^void *_ckalloc(size_t len, const char *file, const/
+_cklock_init	./src/libckpool.c	/^void _cklock_init(cklock_t *lock, const char *file/
+_ckmsgq_add	./src/ckpool.c	/^bool _ckmsgq_add(ckmsgq_t *ckmsgq, void *data, con/
+_cksem_destroy	./src/libckpool.c	/^void _cksem_destroy(sem_t *sem, const char *file, /
+_cksem_init	./src/libckpool.c	/^void _cksem_init(sem_t *sem, const char *file, con/
+_cksem_mswait	./src/libckpool.c	/^int _cksem_mswait(sem_t *sem, int ms, const char */
+_cksem_post	./src/libckpool.c	/^void _cksem_post(sem_t *sem, const char *file, con/
+_cksem_trywait	./src/libckpool.c	/^int _cksem_trywait(sem_t *sem, const char *file, c/
+_cksem_wait	./src/libckpool.c	/^void _cksem_wait(sem_t *sem, const char *file, con/
+_ckzalloc	./src/libckpool.c	/^void *_ckzalloc(size_t len, const char *file, cons/
+_close_unix_socket	./src/libckpool.c	/^void _close_unix_socket(int *sockd, const char *se/
+_cond_init	./src/libckpool.c	/^void _cond_init(pthread_cond_t *cond, const char */
+_cond_timedwait	./src/libckpool.c	/^int _cond_timedwait(pthread_cond_t *cond, mutex_t /
+_cond_wait	./src/libckpool.c	/^int _cond_wait(pthread_cond_t *cond, mutex_t *lock/
+_dec_instance_ref	./src/stratifier.c	/^static void _dec_instance_ref(sdata_t *sdata, stra/
+_get_fd	./src/libckpool.c	/^int _get_fd(int sockd, const char *file, const cha/
+_hex2bin	./src/libckpool.c	/^bool _hex2bin(void *vp, const void *vhexstr, size_/
+_json_check	./src/libckpool.c	/^void _json_check(json_t *val, json_error_t *err, c/
+_json_get_string	./src/ckpool.c	/^static bool _json_get_string(char **store, const j/
+_json_rpc_call	./src/ckpool.c	/^static json_t *_json_rpc_call(connsock_t *cs, cons/
+_json_set_bool	./src/libckpool.h	/^static inline void _json_set_bool(json_t *val, con/
+_json_set_double	./src/libckpool.h	/^static inline void _json_set_double(json_t *val, c/
+_json_set_int	./src/libckpool.h	/^static inline void _json_set_int(json_t *val, cons/
+_json_set_object	./src/libckpool.h	/^static inline void _json_set_object(json_t *val, c/
+_json_set_string	./src/libckpool.h	/^static inline void _json_set_string(json_t *val, c/
+_jsonp_free	./src/jansson-2.14/src/memory.c	/^void _jsonp_free(void **ptr) {$/
+_mutex_init	./src/libckpool.c	/^void _mutex_init(mutex_t *lock, const char *file, /
+_mutex_lock	./src/libckpool.c	/^void _mutex_lock(mutex_t *lock, const char *file, /
+_mutex_timedlock	./src/libckpool.c	/^int _mutex_timedlock(mutex_t *lock, int timeout, c/
+_mutex_trylock	./src/libckpool.c	/^int _mutex_trylock(mutex_t *lock, __maybe_unused c/
+_mutex_unlock	./src/libckpool.c	/^void _mutex_unlock(mutex_t *lock, const char *file/
+_open_unix_client	./src/libckpool.c	/^int _open_unix_client(const char *server_path, con/
+_open_unix_server	./src/libckpool.c	/^int _open_unix_server(const char *server_path, con/
+_queue_proc	./src/ckpool.c	/^void _queue_proc(proc_instance_t *pi, const char */
+_rd_lock	./src/libckpool.c	/^void _rd_lock(rwlock_t *lock, const char *file, co/
+_rd_unlock	./src/libckpool.c	/^void _rd_unlock(rwlock_t *lock, const char *file, /
+_recv_unix_data	./src/libckpool.c	/^bool _recv_unix_data(int sockd, struct msghdr *msg/
+_recv_unix_msg	./src/libckpool.c	/^char *_recv_unix_msg(int sockd, int timeout1, int /
+_rw_unlock	./src/libckpool.c	/^void _rw_unlock(rwlock_t *lock, const char *file, /
+_rwlock_init	./src/libckpool.c	/^void _rwlock_init(rwlock_t *lock, const char *file/
+_send_fd	./src/libckpool.c	/^bool _send_fd(int fd, int sockd, const char *file,/
+_send_json_msg	./src/ckpool.c	/^bool _send_json_msg(connsock_t *cs, const json_t */
+_send_recv_proc	./src/ckpool.c	/^char *_send_recv_proc(const proc_instance_t *pi, c/
+_send_unix_data	./src/libckpool.c	/^bool _send_unix_data(int sockd, const struct msghd/
+_send_unix_msg	./src/libckpool.c	/^bool _send_unix_msg(int sockd, const char *buf, in/
+_stratifier_add_recv	./src/stratifier.c	/^void _stratifier_add_recv(ckpool_t *ckp, json_t *v/
+_validhex	./src/libckpool.c	/^bool _validhex(const char *buf, const char *file, /
+_wr_lock	./src/libckpool.c	/^void _wr_lock(rwlock_t *lock, const char *file, co/
+_wr_trylock	./src/libckpool.c	/^int _wr_trylock(rwlock_t *lock, __maybe_unused con/
+_wr_unlock	./src/libckpool.c	/^void _wr_unlock(rwlock_t *lock, const char *file, /
+_write_length	./src/libckpool.c	/^int _write_length(int sockd, const void *buf, int /
+accept_client	./src/connector.c	/^static int accept_client(cdata_t *cdata, const int/
+account_shares	./src/generator.c	/^static void account_shares(proxy_instance_t *proxy/
+add_base	./src/stratifier.c	/^static void add_base(ckpool_t *ckp, sdata_t *sdata/
+add_buflen	./src/ckpool.c	/^static void add_buflen(ckpool_t *ckp, connsock_t */
+add_json_msgq	./src/generator.c	/^static void add_json_msgq(cs_msg_t **csmsgq, proxy/
+add_log_entry	./src/stratifier.c	/^static void add_log_entry(log_entry_t **entries, c/
+add_mining_node	./src/stratifier.c	/^static void add_mining_node(ckpool_t *ckp, sdata_t/
+add_msg_entry	./src/stratifier.c	/^static void add_msg_entry(char_entry_t **entries, /
+add_node_base	./src/stratifier.c	/^static void add_node_base(ckpool_t *ckp, json_t *v/
+add_node_txns	./src/stratifier.c	/^static void add_node_txns(ckpool_t *ckp, sdata_t */
+add_redirect	./src/connector.c	/^static int add_redirect(ckpool_t *ckp, cdata_t *cd/
+add_remote_base	./src/stratifier.c	/^static void add_remote_base(ckpool_t *ckp, sdata_t/
+add_remote_blockdata	./src/stratifier.c	/^static void add_remote_blockdata(ckpool_t *ckp, js/
+add_remote_server	./src/stratifier.c	/^static void add_remote_server(sdata_t *sdata, stra/
+add_share	./src/generator.c	/^static int add_share(gdata_t *gdata, const int64_t/
+add_submit	./src/stratifier.c	/^static void add_submit(ckpool_t *ckp, stratum_inst/
+add_subproxy	./src/generator.c	/^static void add_subproxy(proxy_instance_t *proxi, /
+add_txn	./src/stratifier.c	/^static bool add_txn(ckpool_t *ckp, sdata_t *sdata,/
+add_userproxy	./src/generator.c	/^static void add_userproxy(ckpool_t *ckp, gdata_t */
+address_to_pubkeytxn	./src/libckpool.c	/^static int address_to_pubkeytxn(char *pkh, const c/
+address_to_scripttxn	./src/libckpool.c	/^static int address_to_scripttxn(char *psh, const c/
+address_to_txn	./src/libckpool.c	/^int address_to_txn(char *p2h, const char *addr, co/
+addrgetinfo	./src/libckpool.c	/^static int addrgetinfo(const char *node, const cha/
+addrinfo_from_url	./src/libckpool.c	/^bool addrinfo_from_url(const char *url, const char/
+age_share_hashtable	./src/stratifier.c	/^static void age_share_hashtable(sdata_t *sdata, co/
+align_len	./src/libckpool.c	/^void align_len(size_t *len)$/
+all_proxystats	./src/generator.c	/^static json_t *all_proxystats(gdata_t *gdata)$/
+api_message	./src/ckpool.c	/^static void api_message(ckpool_t *ckp, char **buf,/
+apimsg	./src/ckpool.h	/^struct apimsg {$/
+apimsg_t	./src/ckpool.h	/^typedef struct apimsg apimsg_t;$/
+append_proxy_line	./src/generator.c	/^static void append_proxy_line(proxy_instance_t *pr/
+array_copy	./src/jansson-2.14/src/value.c	/^static void array_copy(json_t **dest, size_t dpos,/
+array_move	./src/jansson-2.14/src/value.c	/^static void array_move(json_array_t *array, size_t/
+auth_stratum	./src/generator.c	/^static bool auth_stratum(ckpool_t *ckp, connsock_t/
+b58tobin	./src/libckpool.c	/^void b58tobin(char *b58bin, const char *b58)$/
+be256todouble	./src/libckpool.c	/^double be256todouble(const uchar *target)$/
+be32toh	./src/libckpool.h	/^#  define be32toh(x) bswap_32(x)$/
+be64toh	./src/libckpool.h	/^#  define be64toh(x) bswap_64(x)$/
+bech32_decode	./src/libckpool.c	/^static void bech32_decode(uint8_t *data, int *data/
+best_proxy	./src/stratifier.c	/^static proxy_t *best_proxy(sdata_t *sdata)$/
+best_userproxy_headroom	./src/stratifier.c	/^static int64_t best_userproxy_headroom(sdata_t *sd/
+bin2hex	./src/libckpool.c	/^void *bin2hex(const void *vp, size_t len)$/
+bind_socket	./src/libckpool.c	/^int bind_socket(char *url, char *port)$/
+block_reject	./src/stratifier.c	/^static void block_reject(json_t *val)$/
+block_share_summary	./src/stratifier.c	/^static void block_share_summary(sdata_t *sdata)$/
+block_socket	./src/libckpool.c	/^void block_socket(int fd)$/
+block_solve	./src/stratifier.c	/^static void block_solve(ckpool_t *ckp, json_t *val/
+block_update	./src/stratifier.c	/^static void block_update(ckpool_t *ckp, int *prio)/
+blockupdate	./src/stratifier.c	/^static void *blockupdate(void *arg)$/
+broadcast_ping	./src/stratifier.c	/^static void broadcast_ping(sdata_t *sdata)$/
+bswap_256	./src/libckpool.h	/^static inline void bswap_256(void *dest_p, const v/
+bucket_is_empty	./src/jansson-2.14/src/hashtable.c	/^static JSON_INLINE int bucket_is_empty(hashtable_t/
+bucket_t	./src/jansson-2.14/src/hashtable.c	/^typedef struct hashtable_bucket bucket_t;$/
+buf_to_uint32	./src/jansson-2.14/src/hashtable_seed.c	/^static uint32_t buf_to_uint32(char *data) {$/
+buffer	./src/jansson-2.14/src/dump.c	/^struct buffer {$/
+buffer_data_t	./src/jansson-2.14/src/load.c	/^} buffer_data_t;$/
+buffer_get	./src/jansson-2.14/src/load.c	/^static int buffer_get(void *data) {$/
+cached_proxy_line	./src/generator.c	/^static char *cached_proxy_line(proxy_instance_t *p/
+callback_data_t	./src/jansson-2.14/src/load.c	/^} callback_data_t;$/
+callback_get	./src/jansson-2.14/src/load.c	/^static int callback_get(void *data) {$/
+cancel_pthread	./src/ckpool.c	/^static void cancel_pthread(pthread_t *pth)$/
+cdata_t	./src/connector.c	/^typedef struct connector_data cdata_t;$/
+char_entry	./src/ckpool.h	/^struct char_entry {$/
+char_entry_t	./src/ckpool.h	/^typedef struct char_entry char_entry_t;$/
+check_best_diff	./src/stratifier.c	/^static void check_best_diff(sdata_t *sdata, user_i/
+check_bestproxy	./src/stratifier.c	/^static void check_bestproxy(sdata_t *sdata)$/
+check_global_user	./src/stratifier.c	/^static void check_global_user(ckpool_t *ckp, user_/
+check_globalproxies	./src/stratifier.c	/^static void check_globalproxies(sdata_t *sdata, pr/
+check_proxy	./src/stratifier.c	/^static void check_proxy(sdata_t *sdata, proxy_t *p/
+check_required_rule	./src/bitcoin.c	/^static bool check_required_rule(const char* rule)$/
+check_userproxies	./src/stratifier.c	/^static void check_userproxies(sdata_t *sdata, prox/
+ck_completion	./src/libckpool.c	/^struct ck_completion {$/
+ck_completion_timeout	./src/libckpool.c	/^bool ck_completion_timeout(void *fn, void *fnarg, /
+ck_dlock	./src/libckpool.h	/^#define ck_dlock(_lock) _ck_dlock(_lock, __FILE__,/
+ck_dwlock	./src/libckpool.h	/^#define ck_dwlock(_lock) _ck_dwlock(_lock, __FILE_/
+ck_rlock	./src/libckpool.h	/^#define ck_rlock(_lock) _ck_rlock(_lock, __FILE__,/
+ck_runlock	./src/libckpool.h	/^#define ck_runlock(_lock) _ck_runlock(_lock, __FIL/
+ck_wlock	./src/libckpool.h	/^#define ck_wlock(_lock) _ck_wlock(_lock, __FILE__,/
+ck_wunlock	./src/libckpool.h	/^#define ck_wunlock(_lock) _ck_wunlock(_lock, __FIL/
+ckalloc	./src/libckpool.h	/^#define ckalloc(len) _ckalloc(len, __FILE__, __fun/
+ckdb_msg_call	./src/ckpool.h	/^#define ckdb_msg_call(ckp, msg) _ckdb_msg_call(ckp/
+cklock	./src/libckpool.h	/^struct cklock {$/
+cklock_destroy	./src/libckpool.c	/^void cklock_destroy(cklock_t *lock)$/
+cklock_init	./src/libckpool.h	/^#define cklock_init(_lock) _cklock_init(_lock, __F/
+cklock_t	./src/libckpool.h	/^typedef struct cklock cklock_t;$/
+ckmsg	./src/ckpool.h	/^struct ckmsg {$/
+ckmsg_queue	./src/ckpool.c	/^static void *ckmsg_queue(void *arg)$/
+ckmsg_t	./src/ckpool.h	/^typedef struct ckmsg ckmsg_t;$/
+ckmsgq	./src/ckpool.h	/^struct ckmsgq {$/
+ckmsgq_add	./src/ckpool.h	/^#define ckmsgq_add(ckmsgq, data) _ckmsgq_add(ckmsg/
+ckmsgq_empty	./src/ckpool.c	/^bool ckmsgq_empty(ckmsgq_t *ckmsgq)$/
+ckmsgq_stats	./src/stratifier.c	/^static void ckmsgq_stats(ckmsgq_t *ckmsgq, const i/
+ckmsgq_t	./src/ckpool.h	/^typedef struct ckmsgq ckmsgq_t;$/
+ckmutex	./src/libckpool.h	/^struct ckmutex {$/
+ckp_close	./src/libckpool.c	/^void ckp_close(int *fd, const char *file, const ch/
+ckpool_api	./src/ckpool.h	/^static inline void ckpool_api(ckpool_t __maybe_unu/
+ckpool_instance	./src/ckpool.h	/^struct ckpool_instance {$/
+ckpool_t	./src/ckpool.h	/^struct ckpool_instance;$/
+ckrwlock	./src/libckpool.h	/^struct ckrwlock {$/
+cksem_destroy	./src/libckpool.h	/^#define cksem_destroy(SEM) _cksem_destroy(SEM, __F/
+cksem_init	./src/libckpool.h	/^#define cksem_init(SEM) _cksem_init(SEM, __FILE__,/
+cksem_mswait	./src/libckpool.h	/^#define cksem_mswait(SEM, _timeout) _cksem_mswait(/
+cksem_post	./src/libckpool.h	/^#define cksem_post(SEM) _cksem_post(SEM, __FILE__,/
+cksem_trywait	./src/libckpool.h	/^#define cksem_trywait(SEM) _cksem_trywait(SEM, __F/
+cksem_wait	./src/libckpool.h	/^#define cksem_wait(SEM) _cksem_wait(SEM, __FILE__,/
+cksleep_ms	./src/libckpool.c	/^void cksleep_ms(int ms)$/
+cksleep_ms_r	./src/libckpool.c	/^void cksleep_ms_r(ts_t *ts_start, int ms)$/
+cksleep_prepare_r	./src/libckpool.c	/^void cksleep_prepare_r(ts_t *ts)$/
+cksleep_us	./src/libckpool.c	/^void cksleep_us(int64_t us)$/
+cksleep_us_r	./src/libckpool.c	/^void cksleep_us_r(ts_t *ts_start, int64_t us)$/
+ckzalloc	./src/libckpool.h	/^#define ckzalloc(len) _ckzalloc(len, __FILE__, __f/
+clean_up	./src/ckpool.c	/^static void clean_up(ckpool_t *ckp)$/
+clear_bufline	./src/ckpool.c	/^static void clear_bufline(connsock_t *cs)$/
+clear_gbtbase	./src/bitcoin.c	/^void clear_gbtbase(gbtbase_t *gbt)$/
+clear_notify	./src/generator.c	/^static void clear_notify(notify_instance_t *ni)$/
+clear_sender_send	./src/connector.c	/^static void clear_sender_send(sender_send_t *sende/
+clear_txn	./src/stratifier.c	/^static void clear_txn(txntable_t *txn)$/
+clear_unix_msg	./src/generator.c	/^static void clear_unix_msg(unix_msg_t **umsg)$/
+clear_userwb	./src/stratifier.c	/^static void clear_userwb(sdata_t *sdata, int64_t i/
+clear_workbase	./src/stratifier.c	/^static void clear_workbase(ckpool_t *ckp, workbase/
+client_active	./src/stratifier.c	/^static inline bool client_active(stratum_instance_/
+client_auth	./src/stratifier.c	/^static void client_auth(ckpool_t *ckp, stratum_ins/
+client_event_processor	./src/connector.c	/^static void client_event_processor(ckpool_t *ckp, /
+client_exists	./src/connector.c	/^static bool client_exists(cdata_t *cdata, int64_t /
+client_instance	./src/connector.c	/^struct client_instance {$/
+client_instance_t	./src/connector.c	/^typedef struct client_instance client_instance_t;$/
+client_message_processor	./src/connector.c	/^static void client_message_processor(ckpool_t *ckp/
+clientinfo	./src/stratifier.c	/^static json_t *clientinfo(const stratum_instance_t/
+close_proxy_socket	./src/generator.c	/^static void close_proxy_socket(proxy_instance_t *p/
+close_unix_socket	./src/libckpool.h	/^#define close_unix_socket(sockd, server_path) _clo/
+cmdmatch	./src/libckpool.c	/^bool cmdmatch(const char *buf, const char *cmd)$/
+compare_keys	./src/jansson-2.14/src/dump.c	/^static int compare_keys(const void *key1, const vo/
+completion_thread	./src/libckpool.c	/^static void *completion_thread(void *arg)$/
+cond_init	./src/libckpool.h	/^#define cond_init(_cond) _cond_init(_cond, __FILE_/
+cond_timedwait	./src/libckpool.h	/^#define cond_timedwait(_cond, _lock, _abstime) _co/
+cond_wait	./src/libckpool.h	/^#define cond_wait(_cond, _lock) _cond_wait(_cond, /
+connect_proxy	./src/generator.c	/^static bool connect_proxy(ckpool_t *ckp, connsock_/
+connect_socket	./src/libckpool.c	/^int connect_socket(char *url, char *port)$/
+connect_upstream	./src/connector.c	/^static bool connect_upstream(ckpool_t *ckp, connso/
+connector	./src/connector.c	/^void *connector(void *arg)$/
+connector_add_message	./src/connector.c	/^void connector_add_message(ckpool_t *ckp, json_t */
+connector_data	./src/connector.c	/^struct connector_data {$/
+connector_drop_client	./src/stratifier.c	/^static void connector_drop_client(ckpool_t *ckp, c/
+connector_loop	./src/connector.c	/^static void connector_loop(proc_instance_t *pi, cd/
+connector_newclientid	./src/connector.c	/^int64_t connector_newclientid(ckpool_t *ckp)$/
+connector_send_fd	./src/connector.c	/^void connector_send_fd(ckpool_t *ckp, const int fd/
+connector_stats	./src/connector.c	/^char *connector_stats(void *data, const int runtim/
+connector_test_client	./src/stratifier.c	/^static void connector_test_client(ckpool_t *ckp, c/
+connector_upstream_msg	./src/connector.c	/^void connector_upstream_msg(ckpool_t *ckp, char *m/
+connsock	./src/ckpool.h	/^struct connsock {$/
+connsock_t	./src/ckpool.h	/^typedef struct connsock connsock_t;$/
+console_log	./src/ckpool.c	/^static void console_log(ckpool_t __maybe_unused *c/
+container_of	./src/jansson-2.14/src/jansson_private.h	/^#define container_of(ptr_, type_, member_)        /
+convert_bits	./src/libckpool.c	/^static void convert_bits(char *out, int *outlen, c/
+copy_tv	./src/libckpool.c	/^void copy_tv(tv_t *dest, const tv_t *src)$/
+create_ckmsgq	./src/ckpool.c	/^ckmsgq_t *create_ckmsgq(ckpool_t *ckp, const char /
+create_ckmsgqs	./src/ckpool.c	/^ckmsgq_t *create_ckmsgqs(ckpool_t *ckp, const char/
+create_json_params	./src/stratifier.c	/^*create_json_params(const int64_t client_id, const/
+create_process_unixsock	./src/ckpool.c	/^static void create_process_unixsock(proc_instance_/
+create_pthread	./src/libckpool.c	/^void create_pthread(pthread_t *thread, void *(*sta/
+create_subproxy	./src/generator.c	/^static proxy_instance_t *create_subproxy(ckpool_t /
+create_unix_receiver	./src/ckpool.c	/^static void create_unix_receiver(proc_instance_t */
+cs_msg	./src/generator.c	/^struct cs_msg {$/
+cs_msg_t	./src/generator.c	/^typedef struct cs_msg cs_msg_t;$/
+current_headroom	./src/stratifier.c	/^static int64_t current_headroom(sdata_t *sdata, pr/
+data	./src/jansson-2.14/src/load.c	/^typedef int (*get_func)(void *data);$/
+dead_proxy	./src/stratifier.c	/^static void dead_proxy(ckpool_t *ckp, sdata_t *sda/
+dead_proxyid	./src/stratifier.c	/^static void dead_proxyid(sdata_t *sdata, const int/
+dealloc	./src/libckpool.h	/^#define dealloc(ptr) do { \\$/
+dec_instance_ref	./src/stratifier.c	/^#define dec_instance_ref(sdata, instance) _dec_ins/
+decay_client	./src/stratifier.c	/^static void decay_client(stratum_instance_t *clien/
+decay_time	./src/libckpool.c	/^void decay_time(double *f, double fadd, double fse/
+decay_user	./src/stratifier.c	/^static void decay_user(user_instance_t *user, doub/
+decay_worker	./src/stratifier.c	/^static void decay_worker(worker_instance_t *worker/
+decode_unicode_escape	./src/jansson-2.14/src/load.c	/^static int32_t decode_unicode_escape(const char *s/
+del_proxy	./src/stratifier.c	/^static void del_proxy(ckpool_t *ckp, sdata_t *sdat/
+delete_proxy	./src/generator.c	/^static void delete_proxy(ckpool_t *ckp, gdata_t *g/
+diff_from_betarget	./src/libckpool.c	/^double diff_from_betarget(uchar *target)$/
+diff_from_nbits	./src/libckpool.c	/^double diff_from_nbits(char *nbits)$/
+diff_from_target	./src/libckpool.c	/^double diff_from_target(uchar *target)$/
+disable_subproxy	./src/generator.c	/^static void disable_subproxy(gdata_t *gdata, proxy/
+discard_json_params	./src/stratifier.c	/^static void discard_json_params(json_params_t *jp)/
+disconnected_sessionid_exists	./src/stratifier.c	/^static uint64_t disconnected_sessionid_exists(sdat/
+do_deep_copy	./src/jansson-2.14/src/value.c	/^json_t *do_deep_copy(const json_t *json, hashtable/
+do_dump	./src/jansson-2.14/src/dump.c	/^static int do_dump(const json_t *json, size_t flag/
+do_object_update_recursive	./src/jansson-2.14/src/value.c	/^int do_object_update_recursive(json_t *object, jso/
+downstream_block	./src/stratifier.c	/^downstream_block(ckpool_t *ckp, sdata_t *sdata, co/
+downstream_json	./src/stratifier.c	/^static void downstream_json(sdata_t *sdata, const /
+drop_all_clients	./src/connector.c	/^static void drop_all_clients(cdata_t *cdata)$/
+drop_allclients	./src/stratifier.c	/^static void drop_allclients(ckpool_t *ckp)$/
+drop_client	./src/stratifier.c	/^static void drop_client(ckpool_t *ckp, sdata_t *sd/
+drop_passthrough_client	./src/connector.c	/^static void drop_passthrough_client(ckpool_t *ckp,/
+drop_proxy	./src/generator.c	/^static void drop_proxy(gdata_t *gdata, const char /
+dsps_from_key	./src/stratifier.c	/^static double dsps_from_key(json_t *val, const cha/
+dump_indent	./src/jansson-2.14/src/dump.c	/^static int dump_indent(size_t flags, int depth, in/
+dump_log_entries	./src/stratifier.c	/^static void dump_log_entries(log_entry_t **entries/
+dump_string	./src/jansson-2.14/src/dump.c	/^static int dump_string(const char *str, size_t len/
+dump_to_buffer	./src/jansson-2.14/src/dump.c	/^static int dump_to_buffer(const char *buffer, size/
+dump_to_fd	./src/jansson-2.14/src/dump.c	/^static int dump_to_fd(const char *buffer, size_t s/
+dump_to_file	./src/jansson-2.14/src/dump.c	/^static int dump_to_file(const char *buffer, size_t/
+dump_to_strbuffer	./src/jansson-2.14/src/dump.c	/^static int dump_to_strbuffer(const char *buffer, s/
+duplicate_sdata	./src/stratifier.c	/^static sdata_t *duplicate_sdata(const sdata_t *sda/
+dwFlags	./src/jansson-2.14/src/hashtable_seed.c	/^                                           DWORD d/
+empty_buffer	./src/ckpool.c	/^void empty_buffer(connsock_t *cs)$/
+empty_socket	./src/libckpool.c	/^void empty_socket(int fd)$/
+error_set	./src/jansson-2.14/src/load.c	/^static void error_set(json_error_t *error, const l/
+existing_proxy	./src/stratifier.c	/^static proxy_t *existing_proxy(sdata_t *sdata, con/
+existing_subproxy	./src/stratifier.c	/^static proxy_t *existing_subproxy(sdata_t *sdata, /
+extract_sockaddr	./src/libckpool.c	/^bool extract_sockaddr(char *url, char **sockaddr_u/
+fd_get_func	./src/jansson-2.14/src/load.c	/^static int fd_get_func(int *fd) {$/
+final	./src/jansson-2.14/src/lookup3.h	/^#define final(a,b,c) \\$/
+find_notify	./src/generator.c	/^static json_t *find_notify(json_t *val)$/
+flip_32	./src/libckpool.h	/^static inline void flip_32(void *dest_p, const voi/
+flip_80	./src/libckpool.h	/^static inline void flip_80(void *dest_p, const voi/
+free_proxy	./src/stratifier.c	/^static void free_proxy(ckpool_t *ckp, proxy_t *pro/
+free_smsg	./src/stratifier.c	/^static void free_smsg(smsg_t *msg)$/
+from_locale	./src/jansson-2.14/src/strconv.c	/^static void from_locale(char *buffer) {$/
+fulltest	./src/libckpool.c	/^bool fulltest(const uchar *hash, const uchar *targ/
+gbt_witness_data	./src/stratifier.c	/^static void gbt_witness_data(workbase_t *wb, json_/
+gbtbase_t	./src/bitcoin.h	/^typedef struct genwork gbtbase_t;$/
+gdata_t	./src/generator.c	/^typedef struct generator_data gdata_t;$/
+gen_gbtbase	./src/bitcoin.c	/^bool gen_gbtbase(connsock_t *cs, gbtbase_t *gbt)$/
+gen_hash	./src/libckpool.c	/^void gen_hash(uchar *data, uchar *hash, int len)$/
+gen_loop	./src/generator.c	/^static void gen_loop(proc_instance_t *pi)$/
+generate_coinbase	./src/stratifier.c	/^static void generate_coinbase(ckpool_t *ckp, workb/
+generate_remote_user	./src/stratifier.c	/^static user_instance_t *generate_remote_user(ckpoo/
+generate_seed	./src/jansson-2.14/src/hashtable_seed.c	/^static uint32_t generate_seed() {$/
+generate_user	./src/stratifier.c	/^static user_instance_t *generate_user(ckpool_t *ck/
+generate_userwbs	./src/stratifier.c	/^static void generate_userwbs(sdata_t *sdata, workb/
+generate_workinfo	./src/stratifier.c	/^static json_t *generate_workinfo(ckpool_t *ckp, co/
+generator	./src/generator.c	/^void *generator(void *arg)$/
+generator_add_send	./src/generator.c	/^void generator_add_send(ckpool_t *ckp, json_t *val/
+generator_checkaddr	./src/generator.c	/^bool generator_checkaddr(ckpool_t *ckp, const char/
+generator_checktxn	./src/generator.c	/^bool generator_checktxn(const ckpool_t *ckp, const/
+generator_data	./src/generator.c	/^struct generator_data {$/
+generator_drop_client	./src/connector.c	/^static void generator_drop_client(ckpool_t *ckp, c/
+generator_drop_proxy	./src/stratifier.c	/^static void generator_drop_proxy(ckpool_t *ckp, co/
+generator_get_blockhash	./src/generator.c	/^bool generator_get_blockhash(ckpool_t *ckp, int he/
+generator_get_txn	./src/generator.c	/^char *generator_get_txn(ckpool_t *ckp, const char /
+generator_getbase	./src/generator.c	/^struct genwork *generator_getbase(ckpool_t *ckp)$/
+generator_getbest	./src/generator.c	/^int generator_getbest(ckpool_t *ckp, char *hash)$/
+generator_preciousblock	./src/generator.c	/^void generator_preciousblock(ckpool_t *ckp, const /
+generator_recruit	./src/stratifier.c	/^static void generator_recruit(ckpool_t *ckp, const/
+generator_submitblock	./src/generator.c	/^bool generator_submitblock(ckpool_t *ckp, const ch/
+genwork	./src/stratifier.h	/^struct genwork {$/
+get16bits	./src/uthash.h	/^#define get16bits(d) (*((const uint16_t *) (d)))$/
+get_bestblockhash	./src/bitcoin.c	/^bool get_bestblockhash(connsock_t *cs, char *hash)/
+get_blockcount	./src/bitcoin.c	/^int get_blockcount(connsock_t *cs)$/
+get_blockhash	./src/bitcoin.c	/^bool get_blockhash(connsock_t *cs, int height, cha/
+get_create_user	./src/stratifier.c	/^static user_instance_t *get_create_user(sdata_t *s/
+get_create_worker	./src/stratifier.c	/^static worker_instance_t *get_create_worker(sdata_/
+get_fd	./src/libckpool.h	/^#define get_fd(sockd) _get_fd(sockd, __FILE__, __f/
+get_hash_transactions	./src/stratifier.c	/^static json_t *get_hash_transactions(sdata_t *sdat/
+get_line	./src/ckpmsg.c	/^int get_line(char **buf)$/
+get_poolstats	./src/stratifier.c	/^static void get_poolstats(sdata_t *sdata, int *soc/
+get_remote_workbase	./src/stratifier.c	/^static workbase_t *get_remote_workbase(sdata_t *sd/
+get_reqtxns	./src/stratifier.c	/^static json_t *get_reqtxns(sdata_t *sdata, const j/
+get_sernumber	./src/libckpool.c	/^int get_sernumber(uchar *s)$/
+get_timestamp	./src/ckpool.c	/^void get_timestamp(char *stamp)$/
+get_txn	./src/bitcoin.c	/^char *get_txn(connsock_t *cs, const char *hash)$/
+get_unix_msg	./src/ckpool.c	/^unix_msg_t *get_unix_msg(proc_instance_t *pi)$/
+get_uptime	./src/stratifier.c	/^static void get_uptime(sdata_t *sdata, int *sockd)/
+get_user	./src/stratifier.c	/^static user_instance_t *get_user(sdata_t *sdata, c/
+get_workbase	./src/stratifier.c	/^static workbase_t *get_workbase(sdata_t *sdata, co/
+get_worker	./src/stratifier.c	/^static worker_instance_t *get_worker(sdata_t *sdat/
+getclient	./src/stratifier.c	/^static void getclient(sdata_t *sdata, const char */
+getclients	./src/stratifier.c	/^static void getclients(sdata_t *sdata, int *sockd)/
+getproxy	./src/stratifier.c	/^static void getproxy(sdata_t *sdata, const char *b/
+getuser	./src/stratifier.c	/^static void getuser(sdata_t *sdata, const char *bu/
+getusers	./src/stratifier.c	/^static void getusers(sdata_t *sdata, int *sockd)$/
+getworker	./src/stratifier.c	/^static void getworker(sdata_t *sdata, const char */
+getworkers	./src/stratifier.c	/^static void getworkers(sdata_t *sdata, int *sockd)/
+hash_str	./src/jansson-2.14/src/hashtable.c	/^#define hash_str(key, len)          ((size_t)hashl/
+hashlittle	./src/jansson-2.14/src/lookup3.h	/^static uint32_t hashlittle(const void *key, size_t/
+hashmask	./src/jansson-2.14/src/lookup3.h	/^#define hashmask(n) (hashsize(n)-1)$/
+hashsize	./src/jansson-2.14/src/lookup3.h	/^#define hashsize(n) ((size_t)1<<(n))$/
+hashtable_bucket	./src/jansson-2.14/src/hashtable.h	/^struct hashtable_bucket {$/
+hashtable_clear	./src/jansson-2.14/src/hashtable.c	/^void hashtable_clear(hashtable_t *hashtable) {$/
+hashtable_close	./src/jansson-2.14/src/hashtable.c	/^void hashtable_close(hashtable_t *hashtable) {$/
+hashtable_del	./src/jansson-2.14/src/hashtable.c	/^int hashtable_del(hashtable_t *hashtable, const ch/
+hashtable_do_clear	./src/jansson-2.14/src/hashtable.c	/^static void hashtable_do_clear(hashtable_t *hashta/
+hashtable_do_del	./src/jansson-2.14/src/hashtable.c	/^static int hashtable_do_del(hashtable_t *hashtable/
+hashtable_do_rehash	./src/jansson-2.14/src/hashtable.c	/^static int hashtable_do_rehash(hashtable_t *hashta/
+hashtable_find_pair	./src/jansson-2.14/src/hashtable.c	/^static pair_t *hashtable_find_pair(hashtable_t *ha/
+hashtable_get	./src/jansson-2.14/src/hashtable.c	/^void *hashtable_get(hashtable_t *hashtable, const /
+hashtable_init	./src/jansson-2.14/src/hashtable.h	/^int hashtable_init(hashtable_t *hashtable) JANSSON/
+hashtable_iter	./src/jansson-2.14/src/hashtable.c	/^void *hashtable_iter(hashtable_t *hashtable) {$/
+hashtable_iter_at	./src/jansson-2.14/src/hashtable.c	/^void *hashtable_iter_at(hashtable_t *hashtable, co/
+hashtable_iter_key	./src/jansson-2.14/src/hashtable.c	/^void *hashtable_iter_key(void *iter) {$/
+hashtable_iter_key_len	./src/jansson-2.14/src/hashtable.c	/^size_t hashtable_iter_key_len(void *iter) {$/
+hashtable_iter_next	./src/jansson-2.14/src/hashtable.c	/^void *hashtable_iter_next(hashtable_t *hashtable, /
+hashtable_iter_set	./src/jansson-2.14/src/hashtable.c	/^void hashtable_iter_set(void *iter, json_t *value)/
+hashtable_iter_value	./src/jansson-2.14/src/hashtable.c	/^void *hashtable_iter_value(void *iter) {$/
+hashtable_key_to_iter	./src/jansson-2.14/src/hashtable.h	/^#define hashtable_key_to_iter(key_)               /
+hashtable_list	./src/jansson-2.14/src/hashtable.h	/^struct hashtable_list {$/
+hashtable_pair	./src/jansson-2.14/src/hashtable.h	/^struct hashtable_pair {$/
+hashtable_set	./src/jansson-2.14/src/hashtable.c	/^int hashtable_set(hashtable_t *hashtable, const ch/
+hashtable_t	./src/jansson-2.14/src/hashtable.h	/^} hashtable_t;$/
+hex2bin	./src/libckpool.h	/^#define hex2bin(p, vhexstr, len) _hex2bin(p, vhexs/
+htobe16	./src/libckpool.h	/^#  define htobe16(x) bswap_16(x)$/
+htobe32	./src/libckpool.h	/^#  define htobe32(x) bswap_32(x)$/
+htobe64	./src/libckpool.h	/^#  define htobe64(x) bswap_64(x)$/
+htole16	./src/libckpool.h	/^#  define htole16(x) (x)$/
+htole32	./src/libckpool.h	/^#  define htole32(x) (x)$/
+htole64	./src/libckpool.h	/^#  define htole64(x) (x)$/
+http_base64	./src/libckpool.c	/^char *http_base64(const char *src)$/
+inc_instance_ref	./src/connector.c	/^static void inc_instance_ref(cdata_t *cdata, clien/
+info_msg_entries	./src/stratifier.c	/^static void info_msg_entries(char_entry_t **entrie/
+init_client	./src/stratifier.c	/^static void init_client(const stratum_instance_t */
+init_pair	./src/jansson-2.14/src/hashtable.c	/^static pair_t *init_pair(json_t *value, const char/
+input_log	./src/ckpmsg.c	/^struct input_log {$/
+insert_to_bucket	./src/jansson-2.14/src/hashtable.c	/^static void insert_to_bucket(hashtable_t *hashtabl/
+int_from_sessionid	./src/stratifier.c	/^static int int_from_sessionid(const char *sessioni/
+invalidate_client	./src/connector.c	/^static int invalidate_client(ckpool_t *ckp, cdata_/
+isinf	./src/jansson-2.14/src/value.c	/^static JSON_INLINE int isinf(double x) { return !i/
+isnan	./src/jansson-2.14/src/value.c	/^static JSON_INLINE int isnan(double x) { return x /
+jansson_version_cmp	./src/jansson-2.14/src/version.c	/^int jansson_version_cmp(int major, int minor, int /
+jansson_version_str	./src/jansson-2.14/src/version.c	/^const char *jansson_version_str(void) { return JAN/
+join_pthread	./src/libckpool.c	/^void join_pthread(pthread_t thread)$/
+json_array	./src/jansson-2.14/src/value.c	/^json_t *json_array(void) {$/
+json_array_append_new	./src/jansson-2.14/src/value.c	/^int json_array_append_new(json_t *json, json_t *va/
+json_array_clear	./src/jansson-2.14/src/value.c	/^int json_array_clear(json_t *json) {$/
+json_array_copy	./src/jansson-2.14/src/value.c	/^static json_t *json_array_copy(json_t *array) {$/
+json_array_deep_copy	./src/jansson-2.14/src/value.c	/^static json_t *json_array_deep_copy(const json_t */
+json_array_equal	./src/jansson-2.14/src/value.c	/^static int json_array_equal(const json_t *array1, /
+json_array_extend	./src/jansson-2.14/src/value.c	/^int json_array_extend(json_t *json, json_t *other_/
+json_array_foreach	./src/jansson-2.14/src/jansson.h	/^#define json_array_foreach(array, index, value)   /
+json_array_get	./src/jansson-2.14/src/value.c	/^json_t *json_array_get(const json_t *json, size_t /
+json_array_grow	./src/jansson-2.14/src/value.c	/^static json_t **json_array_grow(json_array_t *arra/
+json_array_insert_new	./src/jansson-2.14/src/value.c	/^int json_array_insert_new(json_t *json, size_t ind/
+json_array_remove	./src/jansson-2.14/src/value.c	/^int json_array_remove(json_t *json, size_t index) /
+json_array_set_new	./src/jansson-2.14/src/value.c	/^int json_array_set_new(json_t *json, size_t index,/
+json_array_size	./src/jansson-2.14/src/value.c	/^size_t json_array_size(const json_t *json) {$/
+json_array_string	./src/libckpool.c	/^char *json_array_string(json_t *val, unsigned int /
+json_array_t	./src/jansson-2.14/src/jansson_private.h	/^} json_array_t;$/
+json_boolean	./src/jansson-2.14/src/jansson.h	/^#define json_boolean(val) ((val) ? json_true() : j/
+json_check	./src/libckpool.h	/^#define json_check(VAL, ERR) _json_check(VAL, ERR,/
+json_ckalloc	./src/libckpool.c	/^void *json_ckalloc(size_t size)$/
+json_copy	./src/jansson-2.14/src/value.c	/^json_t *json_copy(json_t *json) {$/
+json_dblcpy	./src/libckpool.h	/^static inline void json_dblcpy(double *dbl, json_t/
+json_deep_copy	./src/jansson-2.14/src/value.c	/^json_t *json_deep_copy(const json_t *json) {$/
+json_delete	./src/jansson-2.14/src/value.c	/^void json_delete(json_t *json) {$/
+json_delete_array	./src/jansson-2.14/src/value.c	/^static void json_delete_array(json_array_t *array)/
+json_delete_integer	./src/jansson-2.14/src/value.c	/^static void json_delete_integer(json_integer_t *in/
+json_delete_object	./src/jansson-2.14/src/value.c	/^static void json_delete_object(json_object_t *obje/
+json_delete_real	./src/jansson-2.14/src/value.c	/^static void json_delete_real(json_real_t *real) { /
+json_delete_string	./src/jansson-2.14/src/value.c	/^static void json_delete_string(json_string_t *stri/
+json_dump_callback	./src/jansson-2.14/src/dump.c	/^int json_dump_callback(const json_t *json, json_du/
+json_dump_file	./src/jansson-2.14/src/dump.c	/^int json_dump_file(const json_t *json, const char /
+json_dumpb	./src/jansson-2.14/src/dump.c	/^size_t json_dumpb(const json_t *json, char *buffer/
+json_dumpf	./src/jansson-2.14/src/dump.c	/^int json_dumpf(const json_t *json, FILE *output, s/
+json_dumpfd	./src/jansson-2.14/src/dump.c	/^int json_dumpfd(const json_t *json, int output, si/
+json_dumps	./src/jansson-2.14/src/dump.c	/^char *json_dumps(const json_t *json, size_t flags)/
+json_encode_errormsg	./src/ckpool.h	/^static inline json_t *json_encode_errormsg(json_er/
+json_entry	./src/stratifier.c	/^struct json_entry {$/
+json_entry_t	./src/stratifier.c	/^typedef struct json_entry json_entry_t;$/
+json_equal	./src/jansson-2.14/src/value.c	/^int json_equal(const json_t *json1, const json_t */
+json_error_code	./src/jansson-2.14/src/jansson.h	/^enum json_error_code {$/
+json_error_t	./src/jansson-2.14/src/jansson.h	/^} json_error_t;$/
+json_errormsg	./src/ckpool.h	/^static inline json_t *json_errormsg(const char __m/
+json_errval	./src/ckpool.c	/^static json_t *json_errval(json_t *val)$/
+json_false	./src/jansson-2.14/src/value.c	/^json_t *json_false(void) {$/
+json_get_alloc_funcs	./src/jansson-2.14/src/memory.c	/^void json_get_alloc_funcs(json_malloc_t *malloc_fn/
+json_get_bool	./src/ckpool.c	/^bool json_get_bool(bool *store, const json_t *val,/
+json_get_configstring	./src/ckpool.c	/^static void json_get_configstring(char **store, co/
+json_get_double	./src/ckpool.c	/^bool json_get_double(double *store, const json_t */
+json_get_int	./src/ckpool.c	/^bool json_get_int(int *store, const json_t *val, c/
+json_get_int64	./src/ckpool.c	/^bool json_get_int64(int64_t *store, const json_t */
+json_get_string	./src/ckpool.c	/^bool json_get_string(char **store, const json_t *v/
+json_get_uint32	./src/ckpool.c	/^bool json_get_uint32(uint32_t *store, const json_t/
+json_getdel_int	./src/ckpool.c	/^bool json_getdel_int(int *store, json_t *val, cons/
+json_getdel_int64	./src/ckpool.c	/^bool json_getdel_int64(int64_t *store, json_t *val/
+json_init	./src/jansson-2.14/src/value.c	/^static JSON_INLINE void json_init(json_t *json, js/
+json_int64cpy	./src/libckpool.h	/^static inline void json_int64cpy(int64_t *i64, jso/
+json_int_t	./src/jansson-2.14/src/jansson.h	/^typedef long long json_int_t;$/
+json_intcpy	./src/libckpool.h	/^static inline void json_intcpy(int *i, json_t *val/
+json_integer	./src/jansson-2.14/src/value.c	/^json_t *json_integer(json_int_t value) {$/
+json_integer_copy	./src/jansson-2.14/src/value.c	/^static json_t *json_integer_copy(const json_t *int/
+json_integer_equal	./src/jansson-2.14/src/value.c	/^static int json_integer_equal(const json_t *intege/
+json_integer_set	./src/jansson-2.14/src/value.c	/^int json_integer_set(json_t *json, json_int_t valu/
+json_integer_t	./src/jansson-2.14/src/jansson_private.h	/^} json_integer_t;$/
+json_integer_value	./src/jansson-2.14/src/value.c	/^json_int_t json_integer_value(const json_t *json) /
+json_is_array	./src/jansson-2.14/src/jansson.h	/^#define json_is_array(json)   ((json) && json_type/
+json_is_boolean	./src/jansson-2.14/src/jansson.h	/^#define json_is_boolean(json) (json_is_true(json) /
+json_is_false	./src/jansson-2.14/src/jansson.h	/^#define json_is_false(json)   ((json) && json_type/
+json_is_integer	./src/jansson-2.14/src/jansson.h	/^#define json_is_integer(json) ((json) && json_type/
+json_is_null	./src/jansson-2.14/src/jansson.h	/^#define json_is_null(json)    ((json) && json_type/
+json_is_number	./src/jansson-2.14/src/jansson.h	/^#define json_is_number(json)  (json_is_integer(jso/
+json_is_object	./src/jansson-2.14/src/jansson.h	/^#define json_is_object(json)  ((json) && json_type/
+json_is_real	./src/jansson-2.14/src/jansson.h	/^#define json_is_real(json)    ((json) && json_type/
+json_is_string	./src/jansson-2.14/src/jansson.h	/^#define json_is_string(json)  ((json) && json_type/
+json_is_true	./src/jansson-2.14/src/jansson.h	/^#define json_is_true(json)    ((json) && json_type/
+json_load_callback	./src/jansson-2.14/src/load.c	/^json_t *json_load_callback(json_load_callback_t ca/
+json_load_file	./src/jansson-2.14/src/load.c	/^json_t *json_load_file(const char *path, size_t fl/
+json_loadb	./src/jansson-2.14/src/load.c	/^json_t *json_loadb(const char *buffer, size_t bufl/
+json_loadf	./src/jansson-2.14/src/load.c	/^json_t *json_loadf(FILE *input, size_t flags, json/
+json_loadfd	./src/jansson-2.14/src/load.c	/^json_t *json_loadfd(int input, size_t flags, json_/
+json_loads	./src/jansson-2.14/src/load.c	/^json_t *json_loads(const char *string, size_t flag/
+json_msg_result	./src/ckpool.c	/^json_t *json_msg_result(const char *msg, json_t **/
+json_null	./src/jansson-2.14/src/value.c	/^json_t *json_null(void) {$/
+json_number_value	./src/jansson-2.14/src/value.c	/^double json_number_value(const json_t *json) {$/
+json_object	./src/jansson-2.14/src/value.c	/^json_t *json_object(void) {$/
+json_object_clear	./src/jansson-2.14/src/value.c	/^int json_object_clear(json_t *json) {$/
+json_object_copy	./src/jansson-2.14/src/value.c	/^static json_t *json_object_copy(json_t *object) {$/
+json_object_deep_copy	./src/jansson-2.14/src/value.c	/^static json_t *json_object_deep_copy(const json_t /
+json_object_del	./src/jansson-2.14/src/value.c	/^int json_object_del(json_t *json, const char *key)/
+json_object_deln	./src/jansson-2.14/src/value.c	/^int json_object_deln(json_t *json, const char *key/
+json_object_dup	./src/libckpool.c	/^json_t *json_object_dup(json_t *val, const char *e/
+json_object_equal	./src/jansson-2.14/src/value.c	/^static int json_object_equal(const json_t *object1/
+json_object_foreach	./src/jansson-2.14/src/jansson.h	/^#define json_object_foreach(object, key, value)   /
+json_object_foreach_safe	./src/jansson-2.14/src/jansson.h	/^#define json_object_foreach_safe(object, n, key, v/
+json_object_get	./src/jansson-2.14/src/value.c	/^json_t *json_object_get(const json_t *json, const /
+json_object_getn	./src/jansson-2.14/src/value.c	/^json_t *json_object_getn(const json_t *json, const/
+json_object_iter	./src/jansson-2.14/src/value.c	/^void *json_object_iter(json_t *json) {$/
+json_object_iter_at	./src/jansson-2.14/src/value.c	/^void *json_object_iter_at(json_t *json, const char/
+json_object_iter_key	./src/jansson-2.14/src/value.c	/^const char *json_object_iter_key(void *iter) {$/
+json_object_iter_key_len	./src/jansson-2.14/src/value.c	/^size_t json_object_iter_key_len(void *iter) {$/
+json_object_iter_next	./src/jansson-2.14/src/value.c	/^void *json_object_iter_next(json_t *json, void *it/
+json_object_iter_set_new	./src/jansson-2.14/src/value.c	/^int json_object_iter_set_new(json_t *json, void *i/
+json_object_iter_value	./src/jansson-2.14/src/value.c	/^json_t *json_object_iter_value(void *iter) {$/
+json_object_key_to_iter	./src/jansson-2.14/src/value.c	/^void *json_object_key_to_iter(const char *key) {$/
+json_object_keylen_foreach	./src/jansson-2.14/src/jansson.h	/^#define json_object_keylen_foreach(object, key, ke/
+json_object_keylen_foreach_safe	./src/jansson-2.14/src/jansson.h	/^#define json_object_keylen_foreach_safe(object, n,/
+json_object_seed	./src/jansson-2.14/src/hashtable_seed.c	/^void json_object_seed(size_t seed) {$/
+json_object_set_new	./src/jansson-2.14/src/value.c	/^int json_object_set_new(json_t *json, const char */
+json_object_set_new_nocheck	./src/jansson-2.14/src/value.c	/^int json_object_set_new_nocheck(json_t *json, cons/
+json_object_setn_new	./src/jansson-2.14/src/value.c	/^int json_object_setn_new(json_t *json, const char /
+json_object_setn_new_nocheck	./src/jansson-2.14/src/value.c	/^int json_object_setn_new_nocheck(json_t *json, con/
+json_object_size	./src/jansson-2.14/src/value.c	/^size_t json_object_size(const json_t *json) {$/
+json_object_t	./src/jansson-2.14/src/jansson_private.h	/^} json_object_t;$/
+json_object_update	./src/jansson-2.14/src/value.c	/^int json_object_update(json_t *object, json_t *oth/
+json_object_update_existing	./src/jansson-2.14/src/value.c	/^int json_object_update_existing(json_t *object, js/
+json_object_update_missing	./src/jansson-2.14/src/value.c	/^int json_object_update_missing(json_t *object, jso/
+json_object_update_recursive	./src/jansson-2.14/src/value.c	/^int json_object_update_recursive(json_t *object, j/
+json_pack	./src/jansson-2.14/src/pack_unpack.c	/^json_t *json_pack(const char *fmt, ...) {$/
+json_pack_ex	./src/jansson-2.14/src/pack_unpack.c	/^json_t *json_pack_ex(json_error_t *error, size_t f/
+json_params	./src/stratifier.c	/^struct json_params {$/
+json_params_t	./src/stratifier.c	/^typedef struct json_params json_params_t;$/
+json_plural	./src/jansson-2.14/examples/simple_parse.c	/^const char *json_plural(size_t count) { return cou/
+json_proxyinfo	./src/stratifier.c	/^static json_t *json_proxyinfo(const proxy_t *proxy/
+json_real	./src/jansson-2.14/src/value.c	/^json_t *json_real(double value) {$/
+json_real_copy	./src/jansson-2.14/src/value.c	/^static json_t *json_real_copy(const json_t *real) /
+json_real_equal	./src/jansson-2.14/src/value.c	/^static int json_real_equal(const json_t *real1, co/
+json_real_set	./src/jansson-2.14/src/value.c	/^int json_real_set(json_t *json, double value) {$/
+json_real_t	./src/jansson-2.14/src/jansson_private.h	/^} json_real_t;$/
+json_real_value	./src/jansson-2.14/src/value.c	/^double json_real_value(const json_t *json) {$/
+json_result	./src/ckpool.c	/^static json_t *json_result(json_t *val)$/
+json_rpc_call	./src/ckpool.c	/^json_t *json_rpc_call(connsock_t *cs, const char */
+json_rpc_msg	./src/ckpool.c	/^void json_rpc_msg(connsock_t *cs, const char *rpc_/
+json_rpc_response	./src/ckpool.c	/^json_t *json_rpc_response(connsock_t *cs, const ch/
+json_set_alloc_funcs	./src/jansson-2.14/src/memory.c	/^void json_set_alloc_funcs(json_malloc_t malloc_fn,/
+json_set_bool	./src/libckpool.h	/^#define json_set_bool(val, key, boolean) _json_set/
+json_set_double	./src/libckpool.h	/^#define json_set_double(val, key, real) _json_set_/
+json_set_int	./src/libckpool.h	/^#define json_set_int(val, key, integer) _json_set_/
+json_set_int64	./src/libckpool.h	/^#define json_set_int64(val, key, i64) _json_set_in/
+json_set_object	./src/libckpool.h	/^#define json_set_object(val, key, object) _json_se/
+json_set_string	./src/libckpool.h	/^#define json_set_string(val, key, str) _json_set_s/
+json_set_uint32	./src/libckpool.h	/^#define json_set_uint32(val, key, u32) _json_set_i/
+json_sprintf	./src/jansson-2.14/src/value.c	/^json_t *json_sprintf(const char *fmt, ...) {$/
+json_strcpy	./src/libckpool.h	/^static inline void json_strcpy(char *buf, json_t */
+json_strdup	./src/libckpool.h	/^static inline void json_strdup(char **buf, json_t /
+json_string	./src/jansson-2.14/src/value.c	/^json_t *json_string(const char *value) {$/
+json_string_copy	./src/jansson-2.14/src/value.c	/^static json_t *json_string_copy(const json_t *stri/
+json_string_equal	./src/jansson-2.14/src/value.c	/^static int json_string_equal(const json_t *string1/
+json_string_length	./src/jansson-2.14/src/value.c	/^size_t json_string_length(const json_t *json) {$/
+json_string_nocheck	./src/jansson-2.14/src/value.c	/^json_t *json_string_nocheck(const char *value) {$/
+json_string_set	./src/jansson-2.14/src/value.c	/^int json_string_set(json_t *json, const char *valu/
+json_string_set_nocheck	./src/jansson-2.14/src/value.c	/^int json_string_set_nocheck(json_t *json, const ch/
+json_string_setn	./src/jansson-2.14/src/value.c	/^int json_string_setn(json_t *json, const char *val/
+json_string_setn_nocheck	./src/jansson-2.14/src/value.c	/^int json_string_setn_nocheck(json_t *json, const c/
+json_string_t	./src/jansson-2.14/src/jansson_private.h	/^} json_string_t;$/
+json_string_value	./src/jansson-2.14/src/value.c	/^const char *json_string_value(const json_t *json) /
+json_stringn	./src/jansson-2.14/src/value.c	/^json_t *json_stringn(const char *value, size_t len/
+json_stringn_nocheck	./src/jansson-2.14/src/value.c	/^json_t *json_stringn_nocheck(const char *value, si/
+json_t	./src/jansson-2.14/src/jansson.h	/^} json_t;$/
+json_to_array	./src/jansson-2.14/src/jansson_private.h	/^#define json_to_array(json_)   container_of(json_,/
+json_to_integer	./src/jansson-2.14/src/jansson_private.h	/^#define json_to_integer(json_) container_of(json_,/
+json_to_object	./src/jansson-2.14/src/jansson_private.h	/^#define json_to_object(json_)  container_of(json_,/
+json_to_real	./src/jansson-2.14/src/jansson_private.h	/^#define json_to_real(json_)    container_of(json_,/
+json_to_string	./src/jansson-2.14/src/jansson_private.h	/^#define json_to_string(json_)  container_of(json_,/
+json_true	./src/jansson-2.14/src/value.c	/^json_t *json_true(void) {$/
+json_type	./src/jansson-2.14/src/jansson.h	/^} json_type;$/
+json_typeof	./src/jansson-2.14/src/jansson.h	/^#define json_typeof(json)     ((json)->type)$/
+json_uint64cpy	./src/libckpool.h	/^static inline void json_uint64cpy(uint64_t *u64, j/
+json_uintcpy	./src/libckpool.h	/^static inline void json_uintcpy(uint32_t *u32, jso/
+json_unpack	./src/jansson-2.14/src/pack_unpack.c	/^int json_unpack(json_t *root, const char *fmt, .../
+json_unpack_ex	./src/jansson-2.14/src/pack_unpack.c	/^int json_unpack_ex(json_t *root, json_error_t *err/
+json_vpack_ex	./src/jansson-2.14/src/pack_unpack.c	/^json_t *json_vpack_ex(json_error_t *error, size_t /
+json_vsprintf	./src/jansson-2.14/src/value.c	/^json_t *json_vsprintf(const char *fmt, va_list ap)/
+json_vunpack_ex	./src/jansson-2.14/src/pack_unpack.c	/^int json_vunpack_ex(json_t *root, json_error_t *er/
+jsonp_dtostr	./src/jansson-2.14/src/strconv.c	/^int jsonp_dtostr(char *buffer, size_t size, double/
+jsonp_eolstrsteal	./src/jansson-2.14/src/memory.c	/^char *jsonp_eolstrsteal(strbuffer_t *strbuff)$/
+jsonp_error_init	./src/jansson-2.14/src/error.c	/^void jsonp_error_init(json_error_t *error, const c/
+jsonp_error_set	./src/jansson-2.14/src/error.c	/^void jsonp_error_set(json_error_t *error, int line/
+jsonp_error_set_source	./src/jansson-2.14/src/error.c	/^void jsonp_error_set_source(json_error_t *error, c/
+jsonp_error_vset	./src/jansson-2.14/src/error.c	/^void jsonp_error_vset(json_error_t *error, int lin/
+jsonp_loop_check	./src/jansson-2.14/src/value.c	/^int jsonp_loop_check(hashtable_t *parents, const j/
+jsonp_malloc	./src/jansson-2.14/src/jansson_private.h	/^void *jsonp_malloc(size_t size) JANSSON_ATTRS((war/
+jsonp_strdup	./src/jansson-2.14/src/memory.c	/^char *jsonp_strdup(const char *str) { return jsonp/
+jsonp_stringn_nocheck_own	./src/jansson-2.14/src/value.c	/^json_t *jsonp_stringn_nocheck_own(const char *valu/
+jsonp_strndup	./src/jansson-2.14/src/memory.c	/^char *jsonp_strndup(const char *str, size_t len) {/
+jsonp_strsteal	./src/jansson-2.14/src/memory.c	/^char *jsonp_strsteal(strbuffer_t *strbuff)$/
+jsonp_strtod	./src/jansson-2.14/src/strconv.c	/^int jsonp_strtod(strbuffer_t *strbuffer, double *o/
+keep_sockalive	./src/libckpool.c	/^void keep_sockalive(int fd)$/
+key_len	./src/jansson-2.14/src/dump.c	/^struct key_len {$/
+kill_pid	./src/ckpool.c	/^static int kill_pid(const int pid, const int sig)$/
+kill_server	./src/generator.c	/^static void kill_server(server_instance_t *si)$/
+l_isalpha	./src/jansson-2.14/src/load.c	/^#define l_isalpha(c) (l_isupper(c) || l_islower(c)/
+l_isdigit	./src/jansson-2.14/src/load.c	/^#define l_isdigit(c) ('0' <= (c) && (c) <= '9')$/
+l_islower	./src/jansson-2.14/src/load.c	/^#define l_islower(c) ('a' <= (c) && (c) <= 'z')$/
+l_isupper	./src/jansson-2.14/src/load.c	/^#define l_isupper(c) ('A' <= (c) && (c) <= 'Z')$/
+l_isxdigit	./src/jansson-2.14/src/load.c	/^#define l_isxdigit(c)                             /
+launch_logger	./src/ckpool.c	/^static void launch_logger(ckpool_t *ckp)$/
+le16toh	./src/libckpool.h	/^#  define le16toh(x) (x)$/
+le256todouble	./src/libckpool.c	/^double le256todouble(const uchar *target)$/
+le32toh	./src/libckpool.h	/^#  define le32toh(x) (x)$/
+le64toh	./src/libckpool.h	/^#  define le64toh(x) (x)$/
+lex_close	./src/jansson-2.14/src/load.c	/^static void lex_close(lex_t *lex) {$/
+lex_free_string	./src/jansson-2.14/src/load.c	/^static void lex_free_string(lex_t *lex) {$/
+lex_get	./src/jansson-2.14/src/load.c	/^static int lex_get(lex_t *lex, json_error_t *error/
+lex_get_save	./src/jansson-2.14/src/load.c	/^static int lex_get_save(lex_t *lex, json_error_t */
+lex_init	./src/jansson-2.14/src/load.c	/^static int lex_init(lex_t *lex, get_func get, size/
+lex_save	./src/jansson-2.14/src/load.c	/^static void lex_save(lex_t *lex, int c) { strbuffe/
+lex_save_cached	./src/jansson-2.14/src/load.c	/^static void lex_save_cached(lex_t *lex) {$/
+lex_scan	./src/jansson-2.14/src/load.c	/^static int lex_scan(lex_t *lex, json_error_t *erro/
+lex_scan_number	./src/jansson-2.14/src/load.c	/^static int lex_scan_number(lex_t *lex, int c, json/
+lex_scan_string	./src/jansson-2.14/src/load.c	/^static void lex_scan_string(lex_t *lex, json_error/
+lex_steal_string	./src/jansson-2.14/src/load.c	/^static char *lex_steal_string(lex_t *lex, size_t */
+lex_t	./src/jansson-2.14/src/load.c	/^} lex_t;$/
+lex_unget	./src/jansson-2.14/src/load.c	/^static void lex_unget(lex_t *lex, int c) { stream_/
+lex_unget_unsave	./src/jansson-2.14/src/load.c	/^static void lex_unget_unsave(lex_t *lex, int c) {$/
+likely	./src/libckpool.h	/^#define likely(expr) (__builtin_expect(!!(expr), 1/
+list_init	./src/jansson-2.14/src/hashtable.c	/^static JSON_INLINE void list_init(list_t *list) {$/
+list_insert	./src/jansson-2.14/src/hashtable.c	/^static JSON_INLINE void list_insert(list_t *list, /
+list_remove	./src/jansson-2.14/src/hashtable.c	/^static JSON_INLINE void list_remove(list_t *list) /
+list_t	./src/jansson-2.14/src/hashtable.c	/^typedef struct hashtable_list list_t;$/
+list_to_pair	./src/jansson-2.14/src/hashtable.c	/^#define list_to_pair(list_)         container_of(l/
+listener	./src/ckpool.c	/^static void *listener(void *arg)$/
+live_server	./src/generator.c	/^static server_instance_t *live_server(ckpool_t *ck/
+load_json	./src/jansson-2.14/examples/simple_parse.c	/^json_t *load_json(const char *text) {$/
+local_block_submit	./src/stratifier.c	/^static bool local_block_submit(ckpool_t *ckp, char/
+log_entry	./src/ckpool.h	/^struct log_entry {$/
+log_entry_t	./src/ckpool.h	/^typedef struct log_entry log_entry_t;$/
+logmsg	./src/ckpool.c	/^void logmsg(int loglevel, const char *fmt, ...)$/
+manage_old_instance	./src/ckpool.c	/^static void manage_old_instance(ckpool_t *ckp, pro/
+masked_inc	./src/stratifier.c	/^static int64_t masked_inc(int64_t value, int64_t m/
+max	./src/jansson-2.14/src/jansson_private.h	/^#define max(a, b) ((a) > (b) ? (a) : (b))$/
+mix	./src/jansson-2.14/src/lookup3.h	/^#define mix(a,b,c) \\$/
+mkstamp	./src/ckpmsg.c	/^void mkstamp(char *stamp, size_t siz)$/
+ms_to_ts	./src/libckpool.c	/^void ms_to_ts(ts_t *spec, int64_t ms)$/
+ms_to_tv	./src/libckpool.c	/^void ms_to_tv(tv_t *val, int64_t ms)$/
+ms_tvdiff	./src/libckpool.c	/^int ms_tvdiff(tv_t *end, tv_t *start)$/
+mutex_destroy	./src/libckpool.c	/^void mutex_destroy(mutex_t *lock)$/
+mutex_init	./src/libckpool.h	/^#define mutex_init(_lock) _mutex_init(_lock, __FIL/
+mutex_lock	./src/libckpool.h	/^#define mutex_lock(_lock) _mutex_lock(_lock, __FIL/
+mutex_t	./src/libckpool.h	/^typedef struct ckmutex mutex_t;$/
+mutex_timedlock	./src/libckpool.h	/^#define mutex_timedlock(_lock, _timeout) _mutex_ti/
+mutex_trylock	./src/libckpool.h	/^#define mutex_trylock(_lock) _mutex_trylock(_lock,/
+mutex_unlock	./src/libckpool.h	/^#define mutex_unlock(_lock) _mutex_unlock(_lock, _/
+mutex_unlock_noyield	./src/libckpool.h	/^#define mutex_unlock_noyield(_lock) _mutex_unlock_/
+name_process_sockname	./src/ckpool.c	/^static void name_process_sockname(unixsock_t *us, /
+nanosleep_abstime	./src/libckpool.c	/^void nanosleep_abstime(ts_t *ts_end)$/
+new_enonce1	./src/stratifier.c	/^static bool new_enonce1(ckpool_t *ckp, sdata_t *ck/
+new_proxy_line	./src/generator.c	/^static char *new_proxy_line(connsock_t *cs)$/
+new_share	./src/stratifier.c	/^static bool new_share(sdata_t *sdata, const uchar /
+newline_offset	./src/jansson-2.14/doc/github_commits.c	/^static int newline_offset(const char *text) {$/
+next_proxy_line	./src/generator.c	/^static char *next_proxy_line(connsock_t *cs, proxy/
+next_token	./src/jansson-2.14/src/pack_unpack.c	/^static void next_token(scanner_t *s) {$/
+next_user	./src/stratifier.c	/^static user_instance_t *next_user(sdata_t *sdata, /
+next_worker	./src/stratifier.c	/^static worker_instance_t *next_worker(sdata_t *sda/
+noblock_socket	./src/libckpool.c	/^void noblock_socket(int fd)$/
+node_client_msg	./src/stratifier.c	/^static void node_client_msg(ckpool_t *ckp, json_t /
+node_msg_type	./src/stratifier.c	/^static int node_msg_type(json_t *val)$/
+node_stratum	./src/generator.c	/^static bool node_stratum(connsock_t *cs, proxy_ins/
+nolinger_socket	./src/libckpool.c	/^void nolinger_socket(int fd)$/
+notice_msg_entries	./src/stratifier.c	/^static void notice_msg_entries(char_entry_t **entr/
+notify_instance	./src/generator.c	/^struct notify_instance {$/
+notify_instance_t	./src/generator.c	/^typedef struct notify_instance notify_instance_t;$/
+open_logfile	./src/ckpool.c	/^static bool open_logfile(ckpool_t *ckp)$/
+open_process_sock	./src/ckpool.c	/^static void open_process_sock(ckpool_t *ckp, const/
+open_unix_client	./src/libckpool.h	/^#define open_unix_client(server_path) _open_unix_c/
+open_unix_server	./src/libckpool.h	/^#define open_unix_server(server_path) _open_unix_s/
+ordered_list_to_pair	./src/jansson-2.14/src/hashtable.c	/^#define ordered_list_to_pair(list_) container_of(l/
+pack	./src/jansson-2.14/src/pack_unpack.c	/^static json_t *pack(scanner_t *s, va_list *ap) {$/
+pack_array	./src/jansson-2.14/src/pack_unpack.c	/^static json_t *pack_array(scanner_t *s, va_list *a/
+pack_integer	./src/jansson-2.14/src/pack_unpack.c	/^static json_t *pack_integer(scanner_t *s, json_int/
+pack_object	./src/jansson-2.14/src/pack_unpack.c	/^static json_t *pack_object(scanner_t *s, va_list */
+pack_object_inter	./src/jansson-2.14/src/pack_unpack.c	/^static json_t *pack_object_inter(scanner_t *s, va_/
+pack_real	./src/jansson-2.14/src/pack_unpack.c	/^static json_t *pack_real(scanner_t *s, double valu/
+pack_string	./src/jansson-2.14/src/pack_unpack.c	/^static json_t *pack_string(scanner_t *s, va_list */
+pair_t	./src/jansson-2.14/src/hashtable.c	/^typedef struct hashtable_pair pair_t;$/
+parent_proxy	./src/generator.c	/^static inline bool parent_proxy(const proxy_instan/
+parse_ableproxy	./src/generator.c	/^static void parse_ableproxy(gdata_t *gdata, const /
+parse_addproxy	./src/generator.c	/^static void parse_addproxy(ckpool_t *ckp, gdata_t /
+parse_array	./src/jansson-2.14/src/load.c	/^static json_t *parse_array(lex_t *lex, size_t flag/
+parse_authorise	./src/stratifier.c	/^static json_t *parse_authorise(stratum_instance_t /
+parse_authorise_result	./src/stratifier.c	/^static void parse_authorise_result(ckpool_t *ckp, /
+parse_btcds	./src/ckpool.c	/^static void parse_btcds(ckpool_t *ckp, const json_/
+parse_client_msg	./src/connector.c	/^static bool parse_client_msg(ckpool_t *ckp, cdata_/
+parse_config	./src/ckpool.c	/^static void parse_config(ckpool_t *ckp)$/
+parse_delproxy	./src/generator.c	/^static void parse_delproxy(ckpool_t *ckp, gdata_t /
+parse_diff	./src/generator.c	/^static bool parse_diff(proxy_instance_t *proxi, js/
+parse_globaluser	./src/generator.c	/^static void parse_globaluser(ckpool_t *ckp, gdata_/
+parse_instance_msg	./src/stratifier.c	/^static void parse_instance_msg(ckpool_t *ckp, sdat/
+parse_json	./src/jansson-2.14/src/load.c	/^static json_t *parse_json(lex_t *lex, size_t flags/
+parse_method	./src/generator.c	/^static bool parse_method(ckpool_t *ckp, proxy_inst/
+parse_node_msg	./src/stratifier.c	/^static void parse_node_msg(ckpool_t *ckp, sdata_t /
+parse_nodeservers	./src/ckpool.c	/^static void parse_nodeservers(ckpool_t *ckp, const/
+parse_notify	./src/generator.c	/^static bool parse_notify(ckpool_t *ckp, proxy_inst/
+parse_object	./src/jansson-2.14/src/load.c	/^static json_t *parse_object(lex_t *lex, size_t fla/
+parse_proxies	./src/ckpool.c	/^static void parse_proxies(ckpool_t *ckp, const jso/
+parse_proxystats	./src/generator.c	/^static void parse_proxystats(gdata_t *gdata, const/
+parse_reconnect	./src/generator.c	/^static bool parse_reconnect(proxy_instance_t *prox/
+parse_redirector_share	./src/connector.c	/^static void parse_redirector_share(cdata_t *cdata,/
+parse_redirecturls	./src/ckpool.c	/^static bool parse_redirecturls(ckpool_t *ckp, cons/
+parse_remote_auth	./src/stratifier.c	/^static void parse_remote_auth(ckpool_t *ckp, sdata/
+parse_remote_block	./src/stratifier.c	/^static void parse_remote_block(ckpool_t *ckp, sdat/
+parse_remote_reqtxns	./src/stratifier.c	/^static void parse_remote_reqtxns(sdata_t *sdata, c/
+parse_remote_share	./src/stratifier.c	/^static void parse_remote_share(ckpool_t *ckp, sdat/
+parse_remote_shareerr	./src/stratifier.c	/^static void parse_remote_shareerr(ckpool_t *ckp, j/
+parse_remote_txns	./src/stratifier.c	/^void parse_remote_txns(ckpool_t *ckp, const json_t/
+parse_remote_workers	./src/stratifier.c	/^static void parse_remote_workers(sdata_t *sdata, c/
+parse_remote_workinfo	./src/stratifier.c	/^#define parse_remote_workinfo(ckp, val, client_id)/
+parse_serverurls	./src/ckpool.c	/^static bool parse_serverurls(ckpool_t *ckp, const /
+parse_share	./src/generator.c	/^static int parse_share(gdata_t *gdata, proxy_insta/
+parse_share_result	./src/stratifier.c	/^static void parse_share_result(ckpool_t *ckp, stra/
+parse_submit	./src/stratifier.c	/^static json_t *parse_submit(stratum_instance_t *cl/
+parse_subscribe	./src/generator.c	/^static bool parse_subscribe(connsock_t *cs, proxy_/
+parse_subscribe_result	./src/stratifier.c	/^static void parse_subscribe_result(stratum_instanc/
+parse_trusted	./src/ckpool.c	/^static void parse_trusted(ckpool_t *ckp, const jso/
+parse_trusted_msg	./src/stratifier.c	/^static void parse_trusted_msg(ckpool_t *ckp, sdata/
+parse_upstream_auth	./src/stratifier.c	/^void parse_upstream_auth(ckpool_t *ckp, json_t *va/
+parse_upstream_block	./src/stratifier.c	/^void parse_upstream_block(ckpool_t *ckp, json_t *v/
+parse_upstream_reqtxns	./src/stratifier.c	/^void parse_upstream_reqtxns(ckpool_t *ckp, json_t /
+parse_upstream_txns	./src/stratifier.h	/^#define parse_upstream_txns(ckp, val) parse_remote/
+parse_upstream_workinfo	./src/stratifier.c	/^void parse_upstream_workinfo(ckpool_t *ckp, json_t/
+parse_value	./src/jansson-2.14/src/load.c	/^static json_t *parse_value(lex_t *lex, size_t flag/
+pass_msg	./src/generator.c	/^struct pass_msg {$/
+pass_msg_t	./src/generator.c	/^typedef struct pass_msg pass_msg_t;$/
+passthrough_add_send	./src/generator.c	/^static void passthrough_add_send(proxy_instance_t /
+passthrough_client	./src/connector.c	/^static void passthrough_client(ckpool_t *ckp, cdat/
+passthrough_recv	./src/generator.c	/^static void *passthrough_recv(void *arg)$/
+passthrough_send	./src/generator.c	/^static void passthrough_send(ckpool_t *ckp, pass_m/
+passthrough_stratum	./src/generator.c	/^static bool passthrough_stratum(connsock_t *cs, pr/
+pbBuffer	./src/jansson-2.14/src/hashtable_seed.c	/^typedef BOOL(WINAPI *CRYPTGENRANDOM)(HCRYPTPROV hP/
+pid_wait	./src/ckpool.c	/^static int pid_wait(const pid_t pid, const int ms)/
+ping_upstream	./src/connector.c	/^static void ping_upstream(cdata_t *cdata)$/
+pool_stats	./src/stratifier.c	/^struct pool_stats {$/
+pool_stats_t	./src/stratifier.c	/^typedef struct pool_stats pool_stats_t;$/
+preauth_ref_instance_by_id	./src/stratifier.c	/^static stratum_instance_t *preauth_ref_instance_by/
+precious_block	./src/bitcoin.c	/^void precious_block(connsock_t *cs, const char *pa/
+prepare_child	./src/ckpool.c	/^static void prepare_child(ckpool_t *ckp, proc_inst/
+prepare_proxy	./src/generator.c	/^static void prepare_proxy(proxy_instance_t *proxi)/
+prev_token	./src/jansson-2.14/src/pack_unpack.c	/^static void prev_token(scanner_t *s) {$/
+print_json	./src/jansson-2.14/examples/simple_parse.c	/^void print_json(json_t *root) { print_json_aux(roo/
+print_json_array	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_array(json_t *element, int indent)/
+print_json_aux	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_aux(json_t *element, int indent) {/
+print_json_false	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_false(json_t *element, int indent)/
+print_json_indent	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_indent(int indent) {$/
+print_json_integer	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_integer(json_t *element, int inden/
+print_json_null	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_null(json_t *element, int indent) /
+print_json_object	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_object(json_t *element, int indent/
+print_json_real	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_real(json_t *element, int indent) /
+print_json_string	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_string(json_t *element, int indent/
+print_json_true	./src/jansson-2.14/examples/simple_parse.c	/^void print_json_true(json_t *element, int indent) /
+prio_sort	./src/stratifier.c	/^static int64_t prio_sort(proxy_t *a, proxy_t *b)$/
+proc_instance	./src/ckpool.h	/^struct proc_instance {$/
+proc_instance_t	./src/ckpool.h	/^typedef struct proc_instance proc_instance_t;$/
+process_block	./src/stratifier.c	/^process_block(const workbase_t *wb, const char *co/
+proclog	./src/ckpool.c	/^static void proclog(ckpool_t *ckp, char *msg)$/
+proxy_alive	./src/generator.c	/^static bool proxy_alive(ckpool_t *ckp, proxy_insta/
+proxy_backoff	./src/generator.c	/^static void proxy_backoff(proxy_instance_t *proxy)/
+proxy_base	./src/stratifier.c	/^struct proxy_base {$/
+proxy_by_id	./src/generator.c	/^static proxy_instance_t *proxy_by_id(gdata_t *gdat/
+proxy_instance	./src/generator.c	/^struct proxy_instance {$/
+proxy_instance_t	./src/generator.c	/^typedef struct proxy_instance proxy_instance_t;$/
+proxy_loop	./src/generator.c	/^static void proxy_loop(proc_instance_t *pi)$/
+proxy_mode	./src/generator.c	/^static void proxy_mode(ckpool_t *ckp, proc_instanc/
+proxy_prio	./src/stratifier.c	/^static int proxy_prio(const proxy_t *proxy)$/
+proxy_reconnect	./src/generator.c	/^static void *proxy_reconnect(void *arg)$/
+proxy_recruit	./src/generator.c	/^static void *proxy_recruit(void *arg)$/
+proxy_recv	./src/generator.c	/^static void *proxy_recv(void *arg)$/
+proxy_send	./src/generator.c	/^static void *proxy_send(void *arg)$/
+proxy_stat	./src/generator.c	/^enum proxy_stat {$/
+proxy_t	./src/stratifier.c	/^typedef struct proxy_base proxy_t;$/
+proxyinfo	./src/stratifier.c	/^static void proxyinfo(sdata_t *sdata, const char */
+proxystats	./src/generator.c	/^static json_t *proxystats(proxy_instance_t *proxy,/
+purge_share_hashtable	./src/stratifier.c	/^static void purge_share_hashtable(sdata_t *sdata, /
+put_remote_workbase	./src/stratifier.c	/^#define put_remote_workbase(sdata, wb) put_workbas/
+put_workbase	./src/stratifier.c	/^static void put_workbase(sdata_t *sdata, workbase_/
+quit	./src/libckpool.h	/^#define quit(status, fmt, ...) do { \\$/
+quitfrom	./src/libckpool.h	/^#define quitfrom(status, _file, _func, _line, fmt,/
+rd_lock	./src/libckpool.h	/^#define rd_lock(_lock) _rd_lock(_lock, __FILE__, _/
+rd_timedlock	./src/libckpool.c	/^static int rd_timedlock(pthread_rwlock_t *lock, in/
+rd_unlock	./src/libckpool.h	/^#define rd_unlock(_lock) _rd_unlock(_lock, __FILE_/
+rd_unlock_noyield	./src/libckpool.h	/^#define rd_unlock_noyield(_lock) _rd_unlock_noyiel/
+read_length	./src/libckpool.c	/^int read_length(int sockd, void *buf, int len)$/
+read_line	./src/jansson-2.14/examples/simple_parse.c	/^char *read_line(char *line, int max_chars) {$/
+read_poolstats	./src/stratifier.c	/^static void read_poolstats(ckpool_t *ckp, int *tvs/
+read_socket_line	./src/ckpool.c	/^int read_socket_line(connsock_t *cs, float *timeou/
+read_string	./src/jansson-2.14/src/pack_unpack.c	/^static char *read_string(scanner_t *s, va_list *ap/
+read_userstats	./src/stratifier.c	/^static void read_userstats(ckpool_t *ckp, sdata_t /
+realloc_strcat	./src/libckpool.c	/^void realloc_strcat(char **ptr, const char *s)$/
+reap_proxies	./src/stratifier.c	/^static void reap_proxies(ckpool_t *ckp, sdata_t *s/
+rebuild_txns	./src/stratifier.c	/^static bool rebuild_txns(ckpool_t *ckp, sdata_t *s/
+receiver	./src/connector.c	/^static void *receiver(void *arg)$/
+reconnect_client	./src/stratifier.c	/^static void reconnect_client(sdata_t *sdata, strat/
+reconnect_client_id	./src/stratifier.c	/^static void reconnect_client_id(sdata_t *sdata, co/
+reconnect_generator	./src/generator.c	/^static void reconnect_generator(ckpool_t *ckp)$/
+reconnect_global_clients	./src/stratifier.c	/^static void reconnect_global_clients(sdata_t *sdat/
+reconnect_proxy	./src/generator.c	/^static void reconnect_proxy(proxy_instance_t *prox/
+recruit_best_userproxy	./src/stratifier.c	/^static void recruit_best_userproxy(sdata_t *sdata,/
+recruit_client	./src/connector.c	/^static client_instance_t *recruit_client(cdata_t */
+recruit_subproxies	./src/generator.c	/^static void recruit_subproxies(proxy_instance_t *p/
+recruit_subproxy	./src/generator.c	/^static void recruit_subproxy(gdata_t *gdata, const/
+recv_available	./src/ckpool.c	/^static int recv_available(ckpool_t *ckp, connsock_/
+recv_unix_data	./src/libckpool.h	/^#define recv_unix_data(sockd, msg) _recv_unix_data/
+recv_unix_msg	./src/libckpool.h	/^#define recv_unix_msg(sockd) _recv_unix_msg(sockd,/
+recv_unix_msg_tmo	./src/libckpool.h	/^#define recv_unix_msg_tmo(sockd, tmo) _recv_unix_m/
+recv_unix_msg_tmo2	./src/libckpool.h	/^#define recv_unix_msg_tmo2(sockd, tmo1, tmo2) _rec/
+recycle_client	./src/connector.c	/^static void recycle_client(cdata_t *cdata, client_/
+redirect	./src/connector.c	/^struct redirect {$/
+redirect_client	./src/connector.c	/^static void redirect_client(ckpool_t *ckp, client_/
+redirect_matches	./src/connector.c	/^static bool redirect_matches(cdata_t *cdata, clien/
+redirect_t	./src/connector.c	/^typedef struct redirect redirect_t;$/
+ref_client_by_id	./src/connector.c	/^static client_instance_t *ref_client_by_id(cdata_t/
+ref_instance_by_id	./src/stratifier.c	/^static inline stratum_instance_t *ref_instance_by_/
+ref_instance_by_virtualid	./src/stratifier.c	/^static stratum_instance_t *ref_instance_by_virtual/
+remap_workinfo_id	./src/stratifier.c	/^static void remap_workinfo_id(sdata_t *sdata, json/
+remote_server	./src/stratifier.c	/^static inline bool remote_server(stratum_instance_/
+rename_proc	./src/libckpool.c	/^void rename_proc(const char *name)$/
+request	./src/jansson-2.14/doc/github_commits.c	/^static char *request(const char *url) {$/
+request_reconnect	./src/stratifier.c	/^static void request_reconnect(sdata_t *sdata, cons/
+request_txns	./src/stratifier.c	/^static void request_txns(ckpool_t *ckp, sdata_t *s/
+reset_bestshares	./src/stratifier.c	/^static void reset_bestshares(sdata_t *sdata)$/
+rm_namepid	./src/ckpool.c	/^static void rm_namepid(const proc_instance_t *pi)$/
+rot	./src/jansson-2.14/src/lookup3.h	/^#define rot(x,k) (((x)<<(k)) | ((x)>>(32-(k))))$/
+rotating_filename	./src/libckpool.c	/^char *rotating_filename(const char *path, time_t w/
+rotating_log	./src/libckpool.c	/^bool rotating_log(const char *path, const char *ms/
+round_trip	./src/libckpool.c	/^int round_trip(char *url)$/
+round_up_page	./src/libckpool.c	/^size_t round_up_page(size_t len)$/
+rpc_method	./src/ckpool.c	/^static const char *rpc_method(const char *rpc_req)/
+rw_unlock	./src/libckpool.h	/^#define rw_unlock(_lock) _rw_unlock(_lock, __FILE_/
+rwlock_init	./src/libckpool.h	/^#define rwlock_init(_lock) _rwlock_init(_lock, __F/
+rwlock_t	./src/libckpool.h	/^typedef struct ckrwlock rwlock_t;$/
+safecmp	./src/libckpool.c	/^int safecmp(const char *a, const char *b)$/
+sane_tdiff	./src/libckpool.c	/^double sane_tdiff(tv_t *end, tv_t *start)$/
+sauth_process	./src/stratifier.c	/^static void sauth_process(ckpool_t *ckp, json_para/
+scanner_init	./src/jansson-2.14/src/pack_unpack.c	/^static void scanner_init(scanner_t *s, json_error_/
+scanner_t	./src/jansson-2.14/src/pack_unpack.c	/^} scanner_t;$/
+sdata_t	./src/stratifier.c	/^typedef struct stratifier_data sdata_t;$/
+seed_from_timestamp_and_pid	./src/jansson-2.14/src/hashtable_seed.c	/^static int seed_from_timestamp_and_pid(uint32_t *s/
+seed_from_urandom	./src/jansson-2.14/src/hashtable_seed.c	/^static int seed_from_urandom(uint32_t *seed) {$/
+seed_from_windows_cryptoapi	./src/jansson-2.14/src/hashtable_seed.c	/^static int seed_from_windows_cryptoapi(uint32_t *s/
+segaddress_to_txn	./src/libckpool.c	/^static int segaddress_to_txn(char *p2h, const char/
+select_sdata	./src/stratifier.c	/^static sdata_t *select_sdata(ckpool_t *ckp, sdata_/
+send_api_response	./src/ckpool.h	/^static inline void send_api_response(json_t __mayb/
+send_auth_failure	./src/stratifier.c	/^static void send_auth_failure(sdata_t *sdata, stra/
+send_auth_response	./src/stratifier.c	/^static void send_auth_response(sdata_t *sdata, con/
+send_auth_success	./src/stratifier.c	/^static void send_auth_success(ckpool_t *ckp, sdata/
+send_client	./src/connector.c	/^static void send_client(ckpool_t *ckp, cdata_t *cd/
+send_client_json	./src/connector.c	/^static void send_client_json(ckpool_t *ckp, cdata_/
+send_diff	./src/generator.c	/^static void send_diff(ckpool_t *ckp, proxy_instanc/
+send_fd	./src/libckpool.h	/^#define send_fd(fd, sockd) _send_fd(fd, sockd, __F/
+send_json_err	./src/stratifier.c	/^static void send_json_err(sdata_t *sdata, const in/
+send_json_msg	./src/ckpool.h	/^#define send_json_msg(CS, JSON_MSG) _send_json_msg/
+send_json_msgq	./src/generator.c	/^static void send_json_msgq(gdata_t *gdata, cs_msg_/
+send_list	./src/generator.c	/^static void send_list(gdata_t *gdata, const int so/
+send_node_all_txns	./src/stratifier.c	/^static void send_node_all_txns(sdata_t *sdata, con/
+send_node_block	./src/stratifier.c	/^static void send_node_block(ckpool_t *ckp, sdata_t/
+send_node_transactions	./src/stratifier.c	/^static void send_node_transactions(ckpool_t *ckp, /
+send_node_workinfo	./src/stratifier.c	/^static void send_node_workinfo(ckpool_t *ckp, sdat/
+send_nodes_block	./src/stratifier.c	/^static void send_nodes_block(sdata_t *sdata, const/
+send_notify	./src/generator.c	/^static void send_notify(ckpool_t *ckp, proxy_insta/
+send_pong	./src/generator.c	/^static bool send_pong(proxy_instance_t *proxi, jso/
+send_proc	./src/ckpool.h	/^#define send_proc(pi, msg) _queue_proc(&(pi), msg,/
+send_recv_ckdb	./src/ckpool.h	/^#define send_recv_ckdb(ckp, msg) _send_recv_ckdb(c/
+send_recv_path	./src/ckpool.c	/^static bool send_recv_path(const char *path, const/
+send_recv_proc	./src/ckpool.h	/^#define send_recv_proc(pi, msg) _send_recv_proc(&(/
+send_remote_pong	./src/stratifier.c	/^static void send_remote_pong(sdata_t *sdata, strat/
+send_sender_send	./src/connector.c	/^static bool send_sender_send(ckpool_t *ckp, cdata_/
+send_stats	./src/generator.c	/^static void send_stats(gdata_t *gdata, const int s/
+send_stratifier_deadproxy	./src/generator.c	/^static void send_stratifier_deadproxy(ckpool_t *ck/
+send_stratifier_delproxy	./src/generator.c	/^static void send_stratifier_delproxy(ckpool_t *ckp/
+send_sublist	./src/generator.c	/^static void send_sublist(gdata_t *gdata, const int/
+send_subproxystats	./src/generator.c	/^static void send_subproxystats(gdata_t *gdata, con/
+send_subscribe	./src/generator.c	/^static void send_subscribe(ckpool_t *ckp, proxy_in/
+send_transactions	./src/stratifier.c	/^static void send_transactions(ckpool_t *ckp, json_/
+send_unix_data	./src/libckpool.h	/^#define send_unix_data(sockd, msg) _send_unix_data/
+send_unix_msg	./src/libckpool.h	/^#define send_unix_msg(sockd, buf) _send_unix_msg(s/
+send_version	./src/generator.c	/^static bool send_version(proxy_instance_t *proxi, /
+send_workinfo	./src/stratifier.c	/^static void send_workinfo(ckpool_t *ckp, sdata_t */
+sender	./src/connector.c	/^static void *sender(void *arg)$/
+sender_send	./src/connector.c	/^struct sender_send {$/
+sender_send_t	./src/connector.c	/^typedef struct sender_send sender_send_t;$/
+ser_number	./src/libckpool.c	/^int ser_number(uchar *s, int32_t val)$/
+server_alive	./src/generator.c	/^static bool server_alive(ckpool_t *ckp, server_ins/
+server_instance	./src/ckpool.h	/^struct server_instance {$/
+server_instance_t	./src/ckpool.h	/^typedef struct server_instance server_instance_t;$/
+server_mode	./src/generator.c	/^static void server_mode(ckpool_t *ckp, proc_instan/
+server_watchdog	./src/generator.c	/^static void *server_watchdog(void *arg)$/
+session	./src/stratifier.c	/^struct session {$/
+session_t	./src/stratifier.c	/^typedef struct session session_t;$/
+set_error	./src/jansson-2.14/src/pack_unpack.c	/^static void set_error(scanner_t *s, const char *so/
+set_proxy_prio	./src/stratifier.c	/^static void set_proxy_prio(sdata_t *sdata, proxy_t/
+set_recvbufsize	./src/ckpool.c	/^int set_recvbufsize(ckpool_t *ckp, const int fd, c/
+set_sendbufsize	./src/ckpool.c	/^int set_sendbufsize(ckpool_t *ckp, const int fd, c/
+setproxy	./src/stratifier.c	/^static void setproxy(sdata_t *sdata, const char *b/
+setup_node	./src/stratifier.c	/^static void *setup_node(void *arg)$/
+setup_servers	./src/generator.c	/^static void setup_servers(ckpool_t *ckp)$/
+setup_upstream	./src/connector.c	/^static bool setup_upstream(ckpool_t *ckp, cdata_t /
+sha256	./src/sha2.c	/^void sha256(const unsigned char *message, unsigned/
+sha256_ctx	./src/sha2.h	/^} sha256_ctx;$/
+sha256_final	./src/sha2.c	/^void sha256_final(sha256_ctx *ctx, unsigned char */
+sha256_init	./src/sha2.c	/^void sha256_init(sha256_ctx *ctx)$/
+sha256_transf	./src/sha2.c	/^void sha256_transf(sha256_ctx *ctx, const unsigned/
+sha256_update	./src/sha2.c	/^void sha256_update(sha256_ctx *ctx, const unsigned/
+share	./src/stratifier.c	/^struct share {$/
+share_diff	./src/stratifier.c	/^share_diff(char *coinbase, const uchar *enonce1bin/
+share_err	./src/libckpool.h	/^enum share_err {$/
+share_msg	./src/generator.c	/^struct share_msg {$/
+share_msg_t	./src/generator.c	/^typedef struct share_msg share_msg_t;$/
+share_t	./src/stratifier.c	/^typedef struct share share_t;$/
+show_message	./src/generator.c	/^static bool show_message(json_t *val)$/
+sighandler	./src/ckpool.c	/^static void sighandler(const int sig)$/
+size_t	./src/jansson-2.14/src/jansson.h	/^typedef void *(*json_malloc_t)(size_t);$/
+smsg	./src/stratifier.c	/^struct smsg {$/
+smsg_t	./src/stratifier.c	/^typedef struct smsg smsg_t;$/
+sock_blocks	./src/libckpool.h	/^static inline bool sock_blocks(void)$/
+sock_connecting	./src/libckpool.h	/^static inline bool sock_connecting(void)$/
+sock_timeout	./src/libckpool.h	/^static inline bool sock_timeout(void)$/
+srecv_process	./src/stratifier.c	/^static void srecv_process(ckpool_t *ckp, json_t *v/
+ssend_bulk_append	./src/stratifier.c	/^static void ssend_bulk_append(sdata_t *sdata, ckms/
+ssend_bulk_prepend	./src/stratifier.c	/^static void ssend_bulk_prepend(sdata_t *sdata, ckm/
+ssend_process	./src/stratifier.c	/^static void ssend_process(ckpool_t *ckp, smsg_t *m/
+sshare_process	./src/stratifier.c	/^static void sshare_process(ckpool_t *ckp, json_par/
+statsupdate	./src/stratifier.c	/^static void *statsupdate(void *arg)$/
+steal_json_id	./src/stratifier.c	/^static void steal_json_id(json_t *val, json_params/
+store_proxy	./src/generator.c	/^static void store_proxy(gdata_t *gdata, proxy_inst/
+stratifier	./src/stratifier.c	/^void *stratifier(void *arg)$/
+stratifier_add_recv	./src/stratifier.h	/^#define stratifier_add_recv(ckp, val) _stratifier_/
+stratifier_data	./src/stratifier.c	/^struct stratifier_data {$/
+stratifier_drop_client	./src/connector.c	/^static void stratifier_drop_client(ckpool_t *ckp, /
+stratifier_drop_id	./src/connector.c	/^static void stratifier_drop_id(ckpool_t *ckp, cons/
+stratifier_reconnect_client	./src/generator.c	/^static void stratifier_reconnect_client(ckpool_t */
+stratifier_stats	./src/stratifier.c	/^char *stratifier_stats(ckpool_t *ckp, void *data)$/
+stratum_add_send	./src/stratifier.c	/^static void stratum_add_send(sdata_t *sdata, json_/
+stratum_broadcast	./src/stratifier.c	/^static void stratum_broadcast(sdata_t *sdata, json/
+stratum_broadcast_message	./src/stratifier.c	/^static void stratum_broadcast_message(sdata_t *sda/
+stratum_broadcast_update	./src/stratifier.c	/^static void stratum_broadcast_update(sdata_t *sdat/
+stratum_broadcast_updates	./src/stratifier.c	/^static void stratum_broadcast_updates(sdata_t *sda/
+stratum_instance	./src/stratifier.c	/^struct stratum_instance {$/
+stratum_instance_t	./src/stratifier.c	/^typedef struct stratum_instance stratum_instance_t/
+stratum_loop	./src/stratifier.c	/^static void stratum_loop(ckpool_t *ckp, proc_insta/
+stratum_msg	./src/generator.c	/^struct stratum_msg {$/
+stratum_msg_t	./src/generator.c	/^typedef struct stratum_msg stratum_msg_t;$/
+stratum_msgtype	./src/ckpool.h	/^enum stratum_msgtype {$/
+stratum_send_diff	./src/stratifier.c	/^static void stratum_send_diff(sdata_t *sdata, cons/
+stratum_send_message	./src/stratifier.c	/^static void stratum_send_message(sdata_t *sdata, c/
+stratum_send_update	./src/stratifier.c	/^static void stratum_send_update(sdata_t *sdata, co/
+strbuffer_append_byte	./src/jansson-2.14/src/strbuffer.c	/^int strbuffer_append_byte(strbuffer_t *strbuff, ch/
+strbuffer_append_bytes	./src/jansson-2.14/src/strbuffer.c	/^int strbuffer_append_bytes(strbuffer_t *strbuff, c/
+strbuffer_clear	./src/jansson-2.14/src/strbuffer.c	/^void strbuffer_clear(strbuffer_t *strbuff) {$/
+strbuffer_close	./src/jansson-2.14/src/strbuffer.c	/^void strbuffer_close(strbuffer_t *strbuff) {$/
+strbuffer_init	./src/jansson-2.14/src/strbuffer.h	/^int strbuffer_init(strbuffer_t *strbuff) JANSSON_A/
+strbuffer_pop	./src/jansson-2.14/src/strbuffer.c	/^char strbuffer_pop(strbuffer_t *strbuff) {$/
+strbuffer_steal_value	./src/jansson-2.14/src/strbuffer.c	/^char *strbuffer_steal_value(strbuffer_t *strbuff) /
+strbuffer_t	./src/jansson-2.14/src/strbuffer.h	/^} strbuffer_t;$/
+strbuffer_value	./src/jansson-2.14/src/strbuffer.c	/^const char *strbuffer_value(const strbuffer_t *str/
+strdupa	./src/libckpool.c	/^#define strdupa(s)                                /
+stream_get	./src/jansson-2.14/src/load.c	/^static int stream_get(stream_t *stream, json_error/
+stream_init	./src/jansson-2.14/src/load.c	/^static void stream_init(stream_t *stream, get_func/
+stream_t	./src/jansson-2.14/src/load.c	/^} stream_t;$/
+stream_to_lex	./src/jansson-2.14/src/load.c	/^#define stream_to_lex(stream) container_of(stream,/
+stream_unget	./src/jansson-2.14/src/load.c	/^static void stream_unget(stream_t *stream, int c) /
+string_create	./src/jansson-2.14/src/value.c	/^static json_t *string_create(const char *value, si/
+string_data_t	./src/jansson-2.14/src/load.c	/^} string_data_t;$/
+string_get	./src/jansson-2.14/src/load.c	/^static int string_get(void *data) {$/
+subclient	./src/ckpool.h	/^static inline int64_t subclient(const int64_t clie/
+submission_diff	./src/stratifier.c	/^static double submission_diff(sdata_t *sdata, cons/
+submit_block	./src/bitcoin.c	/^bool submit_block(connsock_t *cs, const char *para/
+submit_node_block	./src/stratifier.c	/^static void submit_node_block(ckpool_t *ckp, sdata/
+submit_share	./src/generator.c	/^static void submit_share(gdata_t *gdata, json_t *v/
+submit_transaction	./src/stratifier.c	/^static void submit_transaction(ckpool_t *ckp, cons/
+submit_transaction_array	./src/stratifier.c	/^static void submit_transaction_array(ckpool_t *ckp/
+submit_txn	./src/bitcoin.c	/^void submit_txn(connsock_t *cs, const char *params/
+subproxies_alive	./src/generator.c	/^static bool subproxies_alive(proxy_instance_t *pro/
+subproxy_by_id	./src/generator.c	/^static proxy_instance_t *subproxy_by_id(proxy_inst/
+subscribe_stratum	./src/generator.c	/^static bool subscribe_stratum(ckpool_t *ckp, conns/
+suffix_string	./src/libckpool.c	/^void suffix_string(double val, char *buf, size_t b/
+suggest_diff	./src/generator.c	/^static void suggest_diff(ckpool_t *ckp, connsock_t/
+swap_256	./src/libckpool.h	/^static inline void swap_256(void *dest_p, const vo/
+target_from_diff	./src/libckpool.c	/^void target_from_diff(uchar *target, double diff)$/
+terminate_oldpid	./src/ckpool.c	/^static void terminate_oldpid(const ckpool_t *ckp, /
+test_blocksolve	./src/stratifier.c	/^test_blocksolve(const stratum_instance_t *client, /
+test_redirector_shares	./src/connector.c	/^static bool test_redirector_shares(cdata_t *cdata,/
+throbber	./src/stratifier.c	/^void *throbber(void *arg)$/
+time_bias	./src/stratifier.c	/^static double time_bias(const double tdiff, const /
+timeraddspec	./src/libckpool.c	/^void timeraddspec(ts_t *a, const ts_t *b)$/
+to_locale	./src/jansson-2.14/src/strconv.c	/^static void to_locale(strbuffer_t *strbuffer) {$/
+token	./src/jansson-2.14/src/pack_unpack.c	/^#define token(scanner) ((scanner)->token.token)$/
+token_t	./src/jansson-2.14/src/pack_unpack.c	/^} token_t;$/
+trail_slash	./src/libckpool.c	/^void trail_slash(char **buf)$/
+transactions_by_jobid	./src/stratifier.c	/^static int transactions_by_jobid(sdata_t *sdata, c/
+ts_realtime	./src/libckpool.c	/^void ts_realtime(ts_t *ts)$/
+ts_t	./src/libckpool.h	/^typedef struct timespec ts_t;$/
+ts_to_tv	./src/libckpool.c	/^void ts_to_tv(tv_t *val, const ts_t *spec)$/
+tv_t	./src/libckpool.h	/^typedef struct timeval tv_t;$/
+tv_time	./src/libckpool.c	/^void tv_time(tv_t *tv)$/
+tv_to_ts	./src/libckpool.c	/^void tv_to_ts(ts_t *spec, const tv_t *val)$/
+tvdiff	./src/libckpool.c	/^double tvdiff(tv_t *end, tv_t *start)$/
+txnhashes_by_jobid	./src/stratifier.c	/^static json_t *txnhashes_by_jobid(sdata_t *sdata, /
+txntable	./src/stratifier.c	/^struct txntable {$/
+txntable_t	./src/stratifier.c	/^typedef struct txntable txntable_t;$/
+type_name	./src/jansson-2.14/src/pack_unpack.c	/^#define type_name(x) type_names[json_typeof(x)]$/
+uchar	./src/libckpool.h	/^typedef unsigned char uchar;$/
+uint32_t	./src/uthash.h	/^typedef unsigned int uint32_t;$/
+uint8_t	./src/uthash.h	/^typedef unsigned char uint8_t;$/
+uninitialised_var	./src/libckpool.h	/^#define uninitialised_var(x) x = x$/
+unix_msg	./src/ckpool.h	/^struct unix_msg {$/
+unix_msg_t	./src/ckpool.h	/^typedef struct unix_msg unix_msg_t;$/
+unix_receiver	./src/ckpool.c	/^static void *unix_receiver(void *arg)$/
+unixsock	./src/libckpool.h	/^struct unixsock {$/
+unixsock_t	./src/libckpool.h	/^typedef struct unixsock unixsock_t;$/
+unlikely	./src/libckpool.h	/^#define unlikely(expr) (__builtin_expect(!!(expr),/
+unpack	./src/jansson-2.14/src/pack_unpack.c	/^static int unpack(scanner_t *s, json_t *root, va_l/
+unpack_array	./src/jansson-2.14/src/pack_unpack.c	/^static int unpack_array(scanner_t *s, json_t *root/
+unpack_object	./src/jansson-2.14/src/pack_unpack.c	/^static int unpack_object(scanner_t *s, json_t *roo/
+update_base	./src/stratifier.c	/^static void update_base(sdata_t *sdata, const int /
+update_client	./src/stratifier.c	/^static void update_client(const stratum_instance_t/
+update_diff	./src/stratifier.c	/^static void update_diff(ckpool_t *ckp, const char /
+update_notify	./src/stratifier.c	/^static void update_notify(ckpool_t *ckp, const cha/
+update_solo_client	./src/stratifier.c	/^static void update_solo_client(sdata_t *sdata, wor/
+update_subscribe	./src/stratifier.c	/^static void update_subscribe(ckpool_t *ckp, const /
+update_txns	./src/stratifier.c	/^static void update_txns(ckpool_t *ckp, sdata_t *sd/
+upstream_auth	./src/stratifier.c	/^static void upstream_auth(ckpool_t *ckp, stratum_i/
+upstream_json	./src/stratifier.c	/^static void upstream_json(ckpool_t *ckp, json_t *v/
+upstream_json_msgtype	./src/stratifier.c	/^static void upstream_json_msgtype(ckpool_t *ckp, j/
+upstream_msgtype	./src/stratifier.c	/^static void upstream_msgtype(ckpool_t *ckp, const /
+upstream_workers	./src/stratifier.c	/^static void upstream_workers(ckpool_t *ckp, user_i/
+urecv_process	./src/connector.c	/^static void *urecv_process(void *arg)$/
+url_from_serverurl	./src/libckpool.c	/^bool url_from_serverurl(char *serverurl, char *new/
+url_from_sockaddr	./src/libckpool.c	/^bool url_from_sockaddr(const struct sockaddr *addr/
+url_from_socket	./src/libckpool.c	/^bool url_from_socket(const int sockd, char *url, c/
+us_to_ts	./src/libckpool.c	/^void us_to_ts(ts_t *spec, int64_t us)$/
+us_to_tv	./src/libckpool.c	/^void us_to_tv(tv_t *val, int64_t us)$/
+us_tvdiff	./src/libckpool.c	/^double us_tvdiff(tv_t *end, tv_t *start)$/
+usend_process	./src/connector.c	/^static void usend_process(ckpool_t *ckp, char *buf/
+user_by_workername	./src/stratifier.c	/^static user_instance_t *user_by_workername(sdata_t/
+user_clientinfo	./src/stratifier.c	/^static void user_clientinfo(sdata_t *sdata, const /
+user_instance	./src/stratifier.c	/^struct user_instance {$/
+user_instance_t	./src/stratifier.c	/^struct user_instance;$/
+user_stats	./src/stratifier.c	/^static json_t *user_stats(const user_instance_t *u/
+userclients	./src/stratifier.c	/^static void userclients(sdata_t *sdata, const char/
+userid_from_sessionid	./src/stratifier.c	/^static int userid_from_sessionid(sdata_t *sdata, c/
+userid_from_sessionip	./src/stratifier.c	/^static int userid_from_sessionip(sdata_t *sdata, c/
+userinfo	./src/stratifier.c	/^static json_t *userinfo(const user_instance_t *use/
+userproxy_recv	./src/generator.c	/^static void *userproxy_recv(void *arg)$/
+userwb	./src/stratifier.c	/^struct userwb {$/
+utf8_check_first	./src/jansson-2.14/src/utf.c	/^size_t utf8_check_first(char byte) {$/
+utf8_check_full	./src/jansson-2.14/src/utf.c	/^size_t utf8_check_full(const char *buffer, size_t /
+utf8_check_string	./src/jansson-2.14/src/utf.c	/^int utf8_check_string(const char *string, size_t l/
+utf8_encode	./src/jansson-2.14/src/utf.c	/^int utf8_encode(int32_t codepoint, char *buffer, s/
+utf8_iterate	./src/jansson-2.14/src/utf.c	/^const char *utf8_iterate(const char *buffer, size_/
+uthash_bzero	./src/uthash.h	/^#define uthash_bzero(a,n) memset(a,'\\0',n)$/
+uthash_expand_fyi	./src/uthash.h	/^#define uthash_expand_fyi(tbl)            \/* can /
+uthash_fatal	./src/uthash.h	/^#define uthash_fatal(msg) exit(-1)        \/* fata/
+uthash_free	./src/uthash.h	/^#define uthash_free(ptr,sz) free(ptr)     \/* free/
+uthash_malloc	./src/uthash.h	/^#define uthash_malloc(sz) malloc(sz)      \/* mall/
+uthash_noexpand_fyi	./src/uthash.h	/^#define uthash_noexpand_fyi(tbl)          \/* can /
+uthash_nonfatal_oom	./src/uthash.h	/^#define uthash_nonfatal_oom(obj) do {} while (0)  /
+uthash_strlen	./src/uthash.h	/^#define uthash_strlen(s) strlen(s)$/
+va_copy	./src/jansson-2.14/src/jansson_private.h	/^#define va_copy(a, b) memcpy(&(a), &(b), sizeof(va/
+validate_address	./src/bitcoin.c	/^bool validate_address(connsock_t *cs, const char */
+validate_txn	./src/bitcoin.c	/^json_t *validate_txn(connsock_t *cs, const char *t/
+validhex	./src/libckpool.h	/^#define validhex(buf) _validhex(buf, __FILE__, __f/
+void	./src/jansson-2.14/src/jansson.h	/^typedef void (*json_free_t)(void *);$/
+wait_best_proxy	./src/generator.c	/^static proxy_instance_t *wait_best_proxy(ckpool_t /
+wait_close	./src/libckpool.c	/^int wait_close(int sockd, int timeout)$/
+wait_read_select	./src/libckpool.c	/^int wait_read_select(int sockd, float timeout)$/
+wait_write_select	./src/libckpool.c	/^int wait_write_select(int sockd, float timeout)$/
+wb_merkle_bin_txns	./src/stratifier.c	/^static txntable_t *wb_merkle_bin_txns(ckpool_t *ck/
+workbase_t	./src/stratifier.c	/^typedef struct genwork workbase_t;$/
+worker_clientinfo	./src/stratifier.c	/^static void worker_clientinfo(sdata_t *sdata, cons/
+worker_instance	./src/stratifier.c	/^struct worker_instance {$/
+worker_instance_t	./src/stratifier.c	/^typedef struct worker_instance worker_instance_t;$/
+worker_stats	./src/stratifier.c	/^static json_t *worker_stats(const worker_instance_/
+workerclients	./src/stratifier.c	/^static void workerclients(sdata_t *sdata, const ch/
+workerinfo	./src/stratifier.c	/^static json_t *workerinfo(const user_instance_t *u/
+wr_lock	./src/libckpool.h	/^#define wr_lock(_lock) _wr_lock(_lock, __FILE__, _/
+wr_timedlock	./src/libckpool.c	/^static int wr_timedlock(pthread_rwlock_t *lock, in/
+wr_trylock	./src/libckpool.h	/^#define wr_trylock(_lock) _wr_trylock(_lock, __FIL/
+wr_unlock	./src/libckpool.h	/^#define wr_unlock(_lock) _wr_unlock(_lock, __FILE_/
+wr_unlock_noyield	./src/libckpool.h	/^#define wr_unlock_noyield(_lock) _wr_unlock_noyiel/
+write_length	./src/libckpool.h	/^#define write_length(sockd, buf, len) _write_lengt/
+write_namepid	./src/ckpool.c	/^static void write_namepid(proc_instance_t *pi)$/
+write_pid	./src/ckpool.c	/^static bool write_pid(ckpool_t *ckp, const char *p/
+write_response	./src/jansson-2.14/doc/github_commits.c	/^static size_t write_response(void *ptr, size_t siz/
+write_result	./src/jansson-2.14/doc/github_commits.c	/^struct write_result {$/
+write_socket	./src/libckpool.c	/^int write_socket(int fd, const void *buf, size_t n/
+zmqnotify	./src/stratifier.c	/^static void *zmqnotify(void *arg)$/

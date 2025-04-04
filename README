@@ -1,7 +1,9 @@
 CKPOOL + CKPROXY + libckpool by Con Kolivas
+Mempool Accelerator™ / Research FreeBSD Port - Portland.HODL
 
 Ultra low overhead massively scalable multi-process, multi-threaded modular
-bitcoin mining pool, proxy, passthrough, and library in c for Linux.
+bitcoin mining pool, proxy, passthrough, and library in c for Linux. Currently
+this port is in early alpha and may have bugs.
 
 CKPOOL is code provided free of charge under the GPLv3 license but its development
 is mostly paid for by commissioned funding, and the pool by default contributes

@@ -1,0 +1,94 @@
+#!/usr/bin/env zsh
+
+# Mempool.Space CKSolo Pool Start Script - PortlandHODL
+#
+# Options for base CKSolo config [No Failover / Proxy]
+#   $1 - NETWORK
+#   $2 - Payout Address
+#   $3 - Port
+
+# Initialize variables
+DAEMON=$1
+NETWORK=${DAEMON} # Context Alias
+COINBASE_PAYOUT_ADDRESS=$2
+
+# Check that the NETWORK provided is correct
+# 'bitcoin' is mainnet and needs an mainnet address
+if [ "$NETWORK" = "bitcoin" ] || [ "$NETWORK" = "testnet3" ] || [ "$NETWORK" = "testnet4" ]; then
+    echo "Setting up Mempool.space CKPool with NETWORK $NETWORK"
+
+    if [ "$NETWORK" = "bitcoin" ]; then
+        COINBASE_PAYOUT_ADDRESS="1wizSAYSbuyXbt9d8JV8ytm5acqq2TorC"
+    elif [ "$NETWORK" = "testnet3" ]; then
+        COINBASE_PAYOUT_ADDRESS="tb1qjfplwf7a2dpjj04cx96rysqeastvycc0j50cch"
+    elif [ "$NETWORK" = "testnet4" ]; then
+        COINBASE_PAYOUT_ADDRESS="tb1qjfplwf7a2dpjj04cx96rysqeastvycc0j50cch"
+    else
+        echo "Network setting unsupported for magic coinbase payout address replacement"
+    fi
+else
+    echo "Invalid network selected: $NETWORK, please use bitcoin, testnet3, testnet4"
+    exit 1
+fi
+
+echo "Starting Mempool.space CKSolo using ${NETWORK} network with payout address i${COINBASE_PAYOUT_ADDRESS}"
+
+# Fetch Bitcoin node credentials from the Bitcoin.conf file
+DAEMON_CONF="/bitcoin/${DAEMON}.conf"
+echo "[*] Getting RPC credentials from ${DAEMON_CONF}"
+RPC_USER=$(grep 'rpcuser=' "${DAEMON_CONF}"|cut -d = -f2|head -1)
+RPC_PASS=$(grep 'rpcpassword=' "${DAEMON_CONF}"|cut -d = -f2|head -1)
+
+# Create ckpool config file
+CONFIG_DIR="${HOME}/.ckpool/${NETWORK}"
+CONFIG_FILE="${CONFIG_DIR}/ckpool.conf"
+
+mkdir -p "${CONFIG_DIR}"
+
+cat > "${CONFIG_FILE}" << EOF
+{
+    "btcd" :  [
+        {
+            "url" : "127.0.0.1:8332",
+            "auth" : "${RPC_USER}",
+            "pass" : "${RPC_PASS}",
+            "notify" : true
+        }
+    ],
+    "btcaddress" : "${COINBASE_PAYOUT_ADDRESS}",
+    "btcsig" : "/@wiz/",
+    "blockpoll" : 100,
+    "nonce1length" : 4,
+    "nonce2length" : 8,
+    "update_interval" : 30,
+    "version_mask" : "1fffe000",
+    "serverurl" : [
+        "127.0.0.1:3333"
+    ],
+    "mindiff" : 1,
+    "startdiff" : 42,
+    "maxdiff" : 0,
+    "logdir" : "logs"
+}
+EOF
+
+echo "[*] Created config file at ${CONFIG_FILE}"
+
+# run in loop in case of crash
+until false
+do
+    # reset CWD
+    cd "${CONFIG_DIR}"
+    
+    # disable making core files
+    ulimit -c 0
+    
+    echo "[*] Starting ckpool..."
+    
+    # Run ckpool with the config
+    ckpool "${CONFIG_FILE}"
+    
+    # Wait a bit before restarting
+    echo "[*] ckpool exited, restarting in 1 second..."
+    sleep 1
+done
