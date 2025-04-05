@@ -5,12 +5,14 @@
 # Options for base CKSolo config [No Failover / Proxy]
 #   $1 - NETWORK
 #   $2 - Payout Address
-#   $3 - Port
+#   $3 - Port (optional, defaults to 3333)
 
 # Initialize variables
 DAEMON=$1
 NETWORK=${DAEMON} # Context Alias
 COINBASE_PAYOUT_ADDRESS=$2
+PORT=${3:-3333}  # Use port provided as 3rd argument, or default to 3333 if not specified
+RPC_PORT=8332    # Default to mainnet RPC port, will be updated based on network
 
 # Check that the NETWORK provided is correct
 # 'bitcoin' is mainnet and needs an mainnet address
@@ -18,10 +20,13 @@ if [ "$NETWORK" = "bitcoin" ] || [ "$NETWORK" = "testnet3" ] || [ "$NETWORK" = "
     echo "Setting up Mempool.space CKPool with NETWORK $NETWORK"
 
     if [ "$NETWORK" = "bitcoin" ]; then
+        RPC_PORT=8332   # Mainnet RPC port
         COINBASE_PAYOUT_ADDRESS="1wizSAYSbuyXbt9d8JV8ytm5acqq2TorC"
     elif [ "$NETWORK" = "testnet3" ]; then
+        RPC_PORT=18332  # Testnet3 RPC port
         COINBASE_PAYOUT_ADDRESS="tb1qjfplwf7a2dpjj04cx96rysqeastvycc0j50cch"
     elif [ "$NETWORK" = "testnet4" ]; then
+        RPC_PORT=48332  # Testnet4 RPC port
         COINBASE_PAYOUT_ADDRESS="tb1qjfplwf7a2dpjj04cx96rysqeastvycc0j50cch"
     else
         echo "Network setting unsupported for magic coinbase payout address replacement"
@@ -31,7 +36,8 @@ else
     exit 1
 fi
 
-echo "Starting Mempool.space CKSolo using ${NETWORK} network with payout address i${COINBASE_PAYOUT_ADDRESS}"
+echo "Starting Mempool.space CKSolo using ${NETWORK} network with payout address ${COINBASE_PAYOUT_ADDRESS}"
+echo "Using Bitcoin RPC port: ${RPC_PORT} and CKPool port: ${PORT}"
 
 # Fetch Bitcoin node credentials from the Bitcoin.conf file
 DAEMON_CONF="/bitcoin/${DAEMON}.conf"
@@ -49,7 +55,7 @@ cat > "${CONFIG_FILE}" << EOF
 {
     "btcd" :  [
         {
-            "url" : "127.0.0.1:8332",
+            "url" : "127.0.0.1:${RPC_PORT}",
             "auth" : "${RPC_USER}",
             "pass" : "${RPC_PASS}",
             "notify" : true
@@ -63,7 +69,7 @@ cat > "${CONFIG_FILE}" << EOF
     "update_interval" : 30,
     "version_mask" : "1fffe000",
     "serverurl" : [
-        "127.0.0.1:3333"
+        "127.0.0.1:${PORT}"
     ],
     "mindiff" : 1,
     "startdiff" : 42,
@@ -79,15 +85,15 @@ until false
 do
     # reset CWD
     cd "${CONFIG_DIR}"
-    
+
     # disable making core files
     ulimit -c 0
-    
+
     echo "[*] Starting ckpool..."
-    
+
     # Run ckpool with the config
     ckpool "${CONFIG_FILE}"
-    
+
     # Wait a bit before restarting
     echo "[*] ckpool exited, restarting in 1 second..."
     sleep 1
