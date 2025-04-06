@@ -4,21 +4,19 @@
 #
 # Options for base CKSolo config [No Failover / Proxy]
 #   $1 - NETWORK
-#   $2 - Payout Address
-#   $3 - Port (optional, defaults to 3333)
+#   $2 - Port (optional, defaults to 3333)
 
 # Initialize variables
 DAEMON=$1
 NETWORK=${DAEMON} # Context Alias
-COINBASE_PAYOUT_ADDRESS=$2
-PORT=${3:-3333}  # Use port provided as 3rd argument, or default to 3333 if not specified
+COINBASE_PAYOUT_ADDRESS="" # Empty payout address because it will be overwritten by network based config,
+PORT=${2:-3333}  # Use port provided as 3rd argument, or default to 3333 if not specified
 RPC_PORT=8332    # Default to mainnet RPC port, will be updated based on network
 
 # Check that the NETWORK provided is correct
 # 'bitcoin' is mainnet and needs an mainnet address
 if [ "$NETWORK" = "bitcoin" ] || [ "$NETWORK" = "testnet3" ] || [ "$NETWORK" = "testnet4" ]; then
     echo "Setting up Mempool.space CKPool with NETWORK $NETWORK"
-
     if [ "$NETWORK" = "bitcoin" ]; then
         RPC_PORT=8332   # Mainnet RPC port
         COINBASE_PAYOUT_ADDRESS="1wizSAYSbuyXbt9d8JV8ytm5acqq2TorC"
