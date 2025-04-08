@@ -25,7 +25,7 @@ if [ "$NETWORK" = "bitcoin" ] || [ "$NETWORK" = "testnet3" ] || [ "$NETWORK" = "
         COINBASE_PAYOUT_ADDRESS="tb1qjfplwf7a2dpjj04cx96rysqeastvycc0j50cch"
     elif [ "$NETWORK" = "testnet4" ]; then
         RPC_PORT=48332  # Testnet4 RPC port
-        COINBASE_PAYOUT_ADDRESS="tb1qjfplwf7a2dpjj04cx96rysqeastvycc0j50cch"
+        COINBASE_PAYOUT_ADDRESS="tb1q548z58kqvwyjqwy8vc2ntmg33d7s2wyfv7ukq4"
     else
         echo "Network setting unsupported for magic coinbase payout address replacement"
     fi
