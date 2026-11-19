@@ -4918,6 +4918,26 @@ out_unlock:
 	return ret;
 }
 
+/* Store the client's useragent, once. A node runs parse_subscribe for every
+ * subscribe a client sends. Other threads read useragent without a lock, so
+ * one that is already set is kept rather than replaced, which leaked it, or
+ * freed. Never leaves it NULL. */
+static void set_useragent(stratum_instance_t *client, const char *buf)
+{
+	size_t len;
+
+	if (client->useragent)
+		return;
+	len = buf ? strlen(buf) : 0;
+	if (len) {
+		char *useragent = ckalloc(len + 1);
+
+		memcpy(useragent, buf, len + 1);
+		client->useragent = useragent;
+	} else
+		client->useragent = ckzalloc(1); // Set to ""
+}
+
 /* Extranonce1 must be set here. Needs to be entered with client holding a ref
  * count. */
 static json_t *parse_subscribe(stratum_instance_t *client, const int64_t client_id, const json_t *params_val)
@@ -4950,10 +4970,7 @@ static json_t *parse_subscribe(stratum_instance_t *client, const int64_t client_
 		const char *buf;
 
 		buf = json_string_value(json_array_get(params_val, 0));
-		if (buf && strlen(buf))
-			client->useragent = strdupa(buf);
-		else
-			client->useragent = ckzalloc(1); // Set to ""
+		set_useragent(client, buf);
 		if (arr_size > 1) {
 			/* This would be the session id for reconnect, it will
 			 * not work for clients on a proxied connection. */
@@ -4972,7 +4989,7 @@ static json_t *parse_subscribe(stratum_instance_t *client, const int64_t client_
 			}
 		}
 	} else
-		client->useragent = ckzalloc(1);
+		set_useragent(client, NULL);
 
 	/* Whitelist cgminer based clients to receive stratum messages */
 	if (strcasestr(client->useragent, "gminer"))
@@ -5309,7 +5326,7 @@ static worker_instance_t *__create_worker(user_instance_t *user, const char *wor
 {
 	worker_instance_t *worker = ckzalloc(sizeof(worker_instance_t));
 
-	worker->workername = strdupa(workername);
+	worker->workername = strdup(workername);
 	worker->user_instance = user;
 	DL_APPEND(user->worker_instances, worker);
 	worker->start_time = time(NULL);
@@ -7071,7 +7088,9 @@ static void parse_remote_auth(ckpool_t *ckp, sdata_t *sdata, json_t *val, stratu
 	if (likely(!client))
 		client = __stratum_add_instance(ckp, client_id, remote->address, remote->server);
 	client->remote = true;
-	json_strdup(&client->useragent, val, "useragent");
+	/* The instance can already exist, see set_useragent */
+	if (!client->useragent)
+		json_strdup(&client->useragent, val, "useragent");
 	json_strcpy(client->enonce1, val, "enonce1");
 	json_strcpy(client->address, val, "address");
 	ck_wunlock(&sdata->instance_lock);
