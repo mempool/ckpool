@@ -52,6 +52,7 @@ struct genwork {
 	char *txn_hashes;
 	char witnessdata[80]; //null-terminated ascii
 	bool insert_witness;
+	bool bip54_coinbase; /* Template has the consensuscleanup rule */
 	int merkles;
 	char merklehash[16][68];
 	char merklebin[16][32];

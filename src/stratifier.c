@@ -603,7 +603,12 @@ static void generate_coinbase(ckpool_t *ckp, workbase_t *wb)
 	LOGDEBUG("Coinb1: %s", wb->coinb1);
 	/* Coinbase 1 complete */
 
-	memcpy(wb->coinb2bin + wb->coinb2len, "\xff\xff\xff\xff", 4);
+	/* Input sequence. BIP54 sets the coinbase lock time, which needs a
+	 * non-final sequence */
+	if (wb->bip54_coinbase)
+		memcpy(wb->coinb2bin + wb->coinb2len, "\xfe\xff\xff\xff", 4);
+	else
+		memcpy(wb->coinb2bin + wb->coinb2len, "\xff\xff\xff\xff", 4);
 	wb->coinb2len += 4;
 
 	// Generation value
@@ -649,7 +654,13 @@ static void generate_coinbase(ckpool_t *ckp, workbase_t *wb)
 		wb->coinb3len += witnessdata_size;
 	}
 
-	wb->coinb3len += 4; // Blank lock
+	if (wb->bip54_coinbase) {
+		/* BIP54: the coinbase lock time is the block height minus one */
+		uint32_t locktime = htole32(wb->height - 1);
+
+		memcpy(wb->coinb3bin + wb->coinb3len, &locktime, 4);
+	}
+	wb->coinb3len += 4; // Lock time, blank unless set above
 
 	if (!ckp->btcsolo) {
 		int coinbase_len, offset = 0;
@@ -1427,6 +1438,25 @@ static const int witness_nonce_size = sizeof(witness_nonce);
 static const unsigned char witness_header[] = {0xaa, 0x21, 0xa9, 0xed};
 static const int witness_header_size = sizeof(witness_header);
 
+/* Whether the block template lists a rule, required ("!rule") or not */
+static bool gbt_has_rule(const json_t *gbt, const char *wanted)
+{
+	json_t *rules_array = json_object_get(gbt, "rules");
+	size_t i, rule_count = json_array_size(rules_array);
+
+	for (i = 0; i < rule_count; i++) {
+		const char *rule = json_string_value(json_array_get(rules_array, i));
+
+		if (!rule)
+			continue;
+		if (*rule == '!')
+			rule++;
+		if (!strcmp(rule, wanted))
+			return true;
+	}
+	return false;
+}
+
 static void gbt_witness_data(workbase_t *wb, json_t *txn_array)
 {
 	int i, binlen, txncount = json_array_size(txn_array);
@@ -1516,6 +1546,8 @@ retry:
 		if (wb->insert_witness && safecmp(witnessdata_check + 4, wb->witnessdata) != 0)
 			LOGERR("Witness from btcd: %s. Calculated Witness: %s", witnessdata_check + 4, wb->witnessdata);
 	}
+
+	wb->bip54_coinbase = gbt_has_rule(wb->json, "consensuscleanup");
 
 	generate_coinbase(ckp, wb);
 
