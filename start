@@ -15,7 +15,7 @@ RPC_PORT=8332    # Default to mainnet RPC port, will be updated based on network
 
 # Check that the NETWORK provided is correct
 # 'bitcoin' is mainnet and needs an mainnet address
-if [ "$NETWORK" = "bitcoin" ] || [ "$NETWORK" = "testnet3" ] || [ "$NETWORK" = "testnet4" ]; then
+if [ "$NETWORK" = "bitcoin" ] || [ "$NETWORK" = "testnet3" ] || [ "$NETWORK" = "testnet4" ] || [ "$NETWORK" = "testnet5" ]; then
     echo "Setting up Mempool.space CKPool with NETWORK $NETWORK"
     if [ "$NETWORK" = "bitcoin" ]; then
         RPC_PORT=8332   # Mainnet RPC port
@@ -26,11 +26,15 @@ if [ "$NETWORK" = "bitcoin" ] || [ "$NETWORK" = "testnet3" ] || [ "$NETWORK" = "
     elif [ "$NETWORK" = "testnet4" ]; then
         RPC_PORT=48332  # Testnet4 RPC port
         COINBASE_PAYOUT_ADDRESS="tb1q548z58kqvwyjqwy8vc2ntmg33d7s2wyfv7ukq4"
+    elif [ "$NETWORK" = "testnet5" ]; then
+        RPC_PORT=18352  # Testnet5 RPC port
+        # Testnet5 addresses are encoded like testnet4 ones, so this is the testnet4 payout address
+        COINBASE_PAYOUT_ADDRESS="tb1q548z58kqvwyjqwy8vc2ntmg33d7s2wyfv7ukq4"
     else
         echo "Network setting unsupported for magic coinbase payout address replacement"
     fi
 else
-    echo "Invalid network selected: $NETWORK, please use bitcoin, testnet3, testnet4"
+    echo "Invalid network selected: $NETWORK, please use bitcoin, testnet3, testnet4, testnet5"
     exit 1
 fi
 

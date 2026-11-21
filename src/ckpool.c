@@ -1779,12 +1779,8 @@ int main(int argc, char **argv)
 		ckp.startdiff = 42;
 	if (!ckp.highdiff)
 		ckp.highdiff = 1000000;
-    if (ckp.logdir) {
-        char *t = strdup(ckp.logdir);
-        ckp.logdir = t;
-    } else {
+	if (!ckp.logdir)
 		ckp.logdir = strdup("logs");
-    }
 	if (!ckp.serverurls)
 		ckp.serverurl = ckzalloc(sizeof(char *));
 	if (ckp.proxy && !ckp.proxies)

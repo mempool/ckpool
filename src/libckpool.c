@@ -1338,7 +1338,7 @@ char *json_array_string(json_t *val, unsigned int entry)
 	const char *buf = __json_array_string(val, entry);
 
 	if (buf)
-		return strdupa(buf);
+		return strdup(buf);
 	return NULL;
 }
 

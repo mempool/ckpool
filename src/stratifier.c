@@ -603,7 +603,12 @@ static void generate_coinbase(ckpool_t *ckp, workbase_t *wb)
 	LOGDEBUG("Coinb1: %s", wb->coinb1);
 	/* Coinbase 1 complete */
 
-	memcpy(wb->coinb2bin + wb->coinb2len, "\xff\xff\xff\xff", 4);
+	/* Input sequence. BIP54 sets the coinbase lock time, which needs a
+	 * non-final sequence */
+	if (wb->bip54_coinbase)
+		memcpy(wb->coinb2bin + wb->coinb2len, "\xfe\xff\xff\xff", 4);
+	else
+		memcpy(wb->coinb2bin + wb->coinb2len, "\xff\xff\xff\xff", 4);
 	wb->coinb2len += 4;
 
 	// Generation value
@@ -649,7 +654,13 @@ static void generate_coinbase(ckpool_t *ckp, workbase_t *wb)
 		wb->coinb3len += witnessdata_size;
 	}
 
-	wb->coinb3len += 4; // Blank lock
+	if (wb->bip54_coinbase) {
+		/* BIP54: the coinbase lock time is the block height minus one */
+		uint32_t locktime = htole32(wb->height - 1);
+
+		memcpy(wb->coinb3bin + wb->coinb3len, &locktime, 4);
+	}
+	wb->coinb3len += 4; // Lock time, blank unless set above
 
 	if (!ckp->btcsolo) {
 		int coinbase_len, offset = 0;
@@ -1427,6 +1438,25 @@ static const int witness_nonce_size = sizeof(witness_nonce);
 static const unsigned char witness_header[] = {0xaa, 0x21, 0xa9, 0xed};
 static const int witness_header_size = sizeof(witness_header);
 
+/* Whether the block template lists a rule, required ("!rule") or not */
+static bool gbt_has_rule(const json_t *gbt, const char *wanted)
+{
+	json_t *rules_array = json_object_get(gbt, "rules");
+	size_t i, rule_count = json_array_size(rules_array);
+
+	for (i = 0; i < rule_count; i++) {
+		const char *rule = json_string_value(json_array_get(rules_array, i));
+
+		if (!rule)
+			continue;
+		if (*rule == '!')
+			rule++;
+		if (!strcmp(rule, wanted))
+			return true;
+	}
+	return false;
+}
+
 static void gbt_witness_data(workbase_t *wb, json_t *txn_array)
 {
 	int i, binlen, txncount = json_array_size(txn_array);
@@ -1516,6 +1546,8 @@ retry:
 		if (wb->insert_witness && safecmp(witnessdata_check + 4, wb->witnessdata) != 0)
 			LOGERR("Witness from btcd: %s. Calculated Witness: %s", witnessdata_check + 4, wb->witnessdata);
 	}
+
+	wb->bip54_coinbase = gbt_has_rule(wb->json, "consensuscleanup");
 
 	generate_coinbase(ckp, wb);
 
@@ -4918,6 +4950,26 @@ out_unlock:
 	return ret;
 }
 
+/* Store the client's useragent, once. A node runs parse_subscribe for every
+ * subscribe a client sends. Other threads read useragent without a lock, so
+ * one that is already set is kept rather than replaced, which leaked it, or
+ * freed. Never leaves it NULL. */
+static void set_useragent(stratum_instance_t *client, const char *buf)
+{
+	size_t len;
+
+	if (client->useragent)
+		return;
+	len = buf ? strlen(buf) : 0;
+	if (len) {
+		char *useragent = ckalloc(len + 1);
+
+		memcpy(useragent, buf, len + 1);
+		client->useragent = useragent;
+	} else
+		client->useragent = ckzalloc(1); // Set to ""
+}
+
 /* Extranonce1 must be set here. Needs to be entered with client holding a ref
  * count. */
 static json_t *parse_subscribe(stratum_instance_t *client, const int64_t client_id, const json_t *params_val)
@@ -4950,10 +5002,7 @@ static json_t *parse_subscribe(stratum_instance_t *client, const int64_t client_
 		const char *buf;
 
 		buf = json_string_value(json_array_get(params_val, 0));
-		if (buf && strlen(buf))
-			client->useragent = strdupa(buf);
-		else
-			client->useragent = ckzalloc(1); // Set to ""
+		set_useragent(client, buf);
 		if (arr_size > 1) {
 			/* This would be the session id for reconnect, it will
 			 * not work for clients on a proxied connection. */
@@ -4972,7 +5021,7 @@ static json_t *parse_subscribe(stratum_instance_t *client, const int64_t client_
 			}
 		}
 	} else
-		client->useragent = ckzalloc(1);
+		set_useragent(client, NULL);
 
 	/* Whitelist cgminer based clients to receive stratum messages */
 	if (strcasestr(client->useragent, "gminer"))
@@ -5309,7 +5358,7 @@ static worker_instance_t *__create_worker(user_instance_t *user, const char *wor
 {
 	worker_instance_t *worker = ckzalloc(sizeof(worker_instance_t));
 
-	worker->workername = strdupa(workername);
+	worker->workername = strdup(workername);
 	worker->user_instance = user;
 	DL_APPEND(user->worker_instances, worker);
 	worker->start_time = time(NULL);
@@ -7071,7 +7120,9 @@ static void parse_remote_auth(ckpool_t *ckp, sdata_t *sdata, json_t *val, stratu
 	if (likely(!client))
 		client = __stratum_add_instance(ckp, client_id, remote->address, remote->server);
 	client->remote = true;
-	json_strdup(&client->useragent, val, "useragent");
+	/* The instance can already exist, see set_useragent */
+	if (!client->useragent)
+		json_strdup(&client->useragent, val, "useragent");
 	json_strcpy(client->enonce1, val, "enonce1");
 	json_strcpy(client->address, val, "address");
 	ck_wunlock(&sdata->instance_lock);
